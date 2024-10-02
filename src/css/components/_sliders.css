@@ -1,0 +1,52 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  width: 100%;
+  position: relative;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+    padding-bottom: 16rem;
+  }
+}
+
+.slider__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 48rem) {
+    justify-content: center;
+  }
+}
+
+.slider-button {
+  width: 6rem;
+  height: 6rem;
+  @media (max-width: 48rem) {
+    width: 9.6rem;
+    height: 9.6rem;
+  }
+}
+
+.slider-buttons {
+  display: flex;
+  gap: 16px;
+  @media (max-width: 48rem) {
+    position: absolute;
+    bottom: 0px;
+  }
+}
+
+.slider__container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -5;
+}

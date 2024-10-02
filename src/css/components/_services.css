@@ -1,0 +1,140 @@
+.services {
+}
+
+.services__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  @media (max-width: 48em) {
+    gap: 6.4rem;
+  }
+}
+
+.services__top {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 48em) {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+}
+
+.services__block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 5rem;
+  @media (max-width: 48em) {
+    gap: 3.2rem;
+  }
+}
+
+.services__list {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  @media (max-width: 48em) {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+}
+
+.services__list_bottom {
+  scrollbar-width: none;
+
+  @media (max-width: 48em) {
+    width: 100%;
+    gap: 1.6rem;
+    flex-direction: row;
+    overflow: auto;
+  }
+}
+.services__list_bottom::-webkit-scrollbar {
+  width: 0px; /* Для Chrome, Safari и другие WebKit браузеры */
+}
+
+.services__item {
+  position: relative;
+  padding: 2.8rem 1.6rem 1.6rem;
+  height: 25.1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 3.2rem;
+  @media (max-width: 48em) {
+    padding: 2.8rem;
+    height: 46.2rem;
+    border-radius: 3.2rem;
+    background-image: url(../../assets/images/services-mobile-back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.services__item_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  z-index: -5;
+}
+
+.services__item_text {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-left: 1.2rem;
+  @media (max-width: 48em) {
+    font-size: 3.2rem;
+    margin-left: 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+}
+
+.services__item_text-mobile {
+  display: none;
+  @media (max-width: 48em) {
+    display: flex;
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+.services__item_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services__item_price {
+  height: 4.8rem;
+  width: 14.1rem;
+  border-radius: 10rem;
+  border: 2px solid #4ebdf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4ebdf5;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 111.111%;
+  @media (max-width: 48em) {
+    border-radius: 10rem;
+    height: 8.4rem;
+    width: 22.5rem;
+    font-size: 3.2rem;
+    line-height: normal;
+  }
+}
+
+.services__item-bottom {
+  @media (max-width: 48em) {
+    flex: 0 0 53.6rem;
+    height: 58rem;
+    width: 53.6rem;
+  }
+}

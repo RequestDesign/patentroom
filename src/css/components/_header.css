@@ -1,0 +1,57 @@
+.header {
+  width: 100%;
+  margin: 3.8rem 0rem 3rem;
+
+  @media (max-width: 48em) {
+    margin: 3.2rem 0rem;
+  }
+}
+
+.header__container {
+  height: 9.2rem;
+  background-color: #ffff;
+  border-radius: 100px;
+  padding: 0px 1.8rem 0rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 48em) {
+    height: 13.6rem;
+  }
+  @media (max-width: 48em) {
+    padding: 0rem 2rem 0rem 2.8rem;
+  }
+}
+
+.header__block_left {
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+}
+
+.header__logo {
+  font-family: "Days One";
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  @media (max-width: 48em) {
+    font-size: 3.6rem;
+  }
+}
+
+.header__text {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.header__block_right {
+  display: flex;
+  gap: 4rem;
+}
+
+.header__btn {
+  @media (max-width: 48em) {
+    padding: 0rem;
+  }
+}

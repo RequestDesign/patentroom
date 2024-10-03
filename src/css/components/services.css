@@ -51,7 +51,7 @@
   }
 }
 .services__list_bottom::-webkit-scrollbar {
-  width: 0px; /* Для Chrome, Safari и другие WebKit браузеры */
+  display: none; /* Chrome, Safari, and Opera */
 }
 
 .services__item {

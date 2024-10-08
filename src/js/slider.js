@@ -1,68 +1,89 @@
-// компонент blog
-$(document).ready(function () {
-  var mySwiperBlog = new Swiper(".blog__slider", {
+// Функция для перевода rem в px
+function remToPx(rem) {
+  return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+}
+
+// Универсальная функция для инициализации Swiper с кнопками
+function initializeSwiperWithButtons(
+  swiperSelector,
+  prevButtonId,
+  nextButtonId,
+  breakpoints
+) {
+  var swiperInstance = new Swiper(swiperSelector, {
     slidesPerView: 1,
-    spaceBetween: 28,
+    spaceBetween: remToPx(2.8),
     loop: false,
 
-    breakpoints: {
-      768: {
+    breakpoints: breakpoints || {
+      769: {
         slidesPerView: 4,
       },
     },
   });
 
-  $("#blog-prev").on("click", function () {
-    mySwiperBlog.slidePrev();
+  // Обновление состояния кнопок
+  function updateButtons() {
+    if (swiperInstance.isBeginning) {
+      $(prevButtonId).addClass("inactive"); // Добавляем класс неактивной кнопке
+    } else {
+      $(prevButtonId).removeClass("inactive"); // Убираем класс неактивности
+    }
+
+    if (swiperInstance.isEnd) {
+      $(nextButtonId).addClass("inactive"); // Добавляем класс неактивной кнопке
+    } else {
+      $(nextButtonId).removeClass("inactive"); // Убираем класс неактивности
+    }
+  }
+
+  // Начальная проверка состояния кнопок
+  updateButtons();
+
+  // Обработчики событий для кнопок
+  $(prevButtonId).on("click", function () {
+    swiperInstance.slidePrev();
   });
 
-  $("#blog-next").on("click", function () {
-    mySwiperBlog.slideNext();
+  $(nextButtonId).on("click", function () {
+    swiperInstance.slideNext();
   });
-});
 
-// Компонент team
+  // Обновление состояния кнопок при изменении слайда
+  swiperInstance.on("slideChange", updateButtons);
+
+  // Обновление состояния кнопок при изменении размера экрана
+  $(window).on("resize", function () {
+    setTimeout(updateButtons, 300); // Добавляем небольшую задержку, чтобы дождаться завершения изменения размера
+  });
+
+  return swiperInstance;
+}
+
 $(document).ready(function () {
-  var mySwiperTeam = new Swiper(".team__slider", {
-    slidesPerView: 1,
-    spaceBetween: 28,
-    loop: false,
-
-    breakpoints: {
-      768: {
-        slidesPerView: 4,
-      },
+  // Инициализация слайдера для блога
+  initializeSwiperWithButtons(".blog__slider", "#blog-prev", "#blog-next", {
+    769: {
+      slidesPerView: 4,
     },
   });
 
-  $("#team-prev").on("click", function () {
-    mySwiperTeam.slidePrev();
+  // Инициализация слайдера для команды
+  initializeSwiperWithButtons(".team__slider", "#team-prev", "#team-next", {
+    769: {
+      slidesPerView: 4,
+    },
   });
 
-  $("#team-next").on("click", function () {
-    mySwiperTeam.slideNext();
-  });
-});
-
-// Компонент reviews
-$(document).ready(function () {
-  var mySwiperReviews = new Swiper(".reviews__slider", {
-    slidesPerView: 1,
-    spaceBetween: 28,
-    loop: false,
-
-    breakpoints: {
-      768: {
+  // Инициализация слайдера для отзывов
+  initializeSwiperWithButtons(
+    ".reviews__slider",
+    "#reviews-prev",
+    "#reviews-next",
+    {
+      769: {
         slidesPerView: 3,
       },
-    },
-  });
-
-  $("#reviews-prev").on("click", function () {
-    mySwiperReviews.slidePrev();
-  });
-
-  $("#reviews-next").on("click", function () {
-    mySwiperReviews.slideNext();
-  });
+    }
+  );
 });

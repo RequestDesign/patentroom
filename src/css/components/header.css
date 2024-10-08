@@ -44,6 +44,21 @@
   font-size: 2.2rem;
   font-weight: 600;
 }
+.header__link {
+  padding: 1.7rem 2.2rem 1.5rem 2.2rem;
+  border: 2px solid transparent;
+  border-radius: 10rem;
+  transition: border 1s ease;
+  @media (max-width: 48em) {
+    display: none;
+  }
+}
+
+@media (min-width: 48em) {
+  .header__link:hover {
+    border-color: #4ebdf5;
+  }
+}
 
 .header__block_right {
   display: flex;

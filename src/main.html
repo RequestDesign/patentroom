@@ -12,12 +12,88 @@
     <title>Главная</title>
   </head>
   <body class="background-main">
+    <div class="modal" id="modal-success">
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <div class="modal__left-img">
+            <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+          </div>
+          <div class="modal__right">
+            <button class="modal-close">
+              <img src="./assets/images/icon-close.svg" alt="icon-close" />
+            </button>
+            <h2 class="txt36">спасибо за подписку!</h2>
+            <button class="btn btn-blue btn-primary">на главную</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- модалка подписки на рассылку (Newsletter)-->
+    <div class="modal" id="modal-nl">
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <div class="modal__left-img">
+            <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+          </div>
+          <div class="modal__right">
+            <button class="modal-close">
+              <img src="./assets/images/icon-close.svg" alt="icon-close" />
+            </button>
+            <h2 class="txt36">подпишитесь на нашу рассылку</h2>
+            <form class="form-nl" id="form" novalidate>
+              <label class="form-label">
+                <input
+                  id="email"
+                  class="form-input"
+                  type="email"
+                  placeholder="email"
+                  required
+                />
+                <span class="error-message" id="email-error"></span>
+              </label>
+              <button
+                class="btn btn-blue btn-primary"
+                type="submit"
+                data-modal="modal-success"
+              >
+                Подписаться
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- модалка заявка отправлена -->
+    <div class="modal modal-bid" id="modal-bid">
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <div class="modal__left-img">
+            <img src="./assets/images/modal-sculpture.png" alt="sculpture" />
+          </div>
+          <div class="modal__right">
+            <button class="modal-close">
+              <img src="./assets/images/icon-close.svg" alt="icon-close" />
+            </button>
+            <h2 class="txt36">Ваша заявка отправлена</h2>
+            <p class="txt18">В ближайшее время с Вами свяжется наш менеджер</p>
+            <a href="./main.html"
+              ><button class="btn btn-blue btn-primary">на главную</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
     <header class="header">
       <div class="container">
         <div class="header__container">
           <div class="header__block_left">
             <p class="header__logo">PatentRum</p>
-            <p class="header__text hide-mobile">Блог</p>
+            <a class="header__link" href="#">
+              <p class="header__text hide-mobile">Блог</p></a
+            >
           </div>
 
           <div class="header__block_right">
@@ -34,11 +110,13 @@
               <button class="btn btn-primary hide-mobile">Войти</button>
               <button class="btn btn-secondary header__btn">
                 <span class="hide-mobile">меню</span>
-                <img
-                  class="icon-set"
-                  src="./assets/images/icon-menu.svg"
-                  alt="иконка-меню"
-                />
+                <div class="icon-set">
+                  <img
+                    class="icon-set-img"
+                    src="./assets/images/icon-menu.svg"
+                    alt="иконка-меню"
+                  />
+                </div>
               </button>
             </div>
           </div>
@@ -47,24 +125,24 @@
     </header>
 
     <main class="main">
-      <section class="main__trademark container">
-        <div class="main__trademark_content">
-          <div class="main__trademark_info">
-            <div class="main__trademark_text">
+      <section class="trademark container">
+        <div class="trademark_content">
+          <div class="trademark_left">
+            <div class="trademark_text">
               <h1>Регистрация товарного знака онлайн</h1>
-              <p class="main__trademark_subtitle">
+              <p class="txt22">
                 После регистрации товарного знака PatentRum продолжает оказывать
                 поддержку клиенту, помогая ему в дальнейшем использовании и
                 защите своего товарного знака
               </p>
             </div>
-            <div class="main__trademark_registration-search">
+            <div class="trademark_registration-search">
               <button class="btn btn-blue btn-primary">
                 Зарегистрироваться
               </button>
-              <div class="main__trademark_search">
+              <div class="trademark_search">
                 <input
-                  class="main__trademark_input"
+                  class="trademark_input"
                   type="text"
                   placeholder="Поиск по товарным знакам"
                 />
@@ -76,14 +154,14 @@
               </div>
             </div>
           </div>
-          <div class="main__trademark_right">
+          <div class="trademark_right">
             <img
-              class="main__trademark_img"
+              class="trademark_img"
               src="./assets/images/trademark-main-img.png"
               alt="sculpture"
             />
             <img
-              class="main__trademark_rating"
+              class="trademark_rating"
               src="./assets/images/trademark-yandex.png"
               alt="rating"
             />
@@ -98,11 +176,13 @@
             <div class="button-group">
               <button class="btn btn-secondary">
                 <span>калькулятор</span>
-                <img
-                  class="icon-set"
-                  src="./assets/images/icon-calculator.svg"
-                  alt="иконка-меню"
-                />
+                <div class="icon-set">
+                  <img
+                    class="icon-set-img"
+                    src="./assets/images/icon-calculator.svg"
+                    alt="иконка-меню"
+                  />
+                </div>
               </button>
               <button class="btn btn-blue btn-primary">все услуги</button>
             </div>
@@ -169,7 +249,7 @@
                 />
                 <div class="services__item_text">
                   <p>Продление регистрации товарного знака</p>
-                  <p class="services__item_text-mobile">
+                  <p class="services__item_text-mobile services__item_text-row">
                     Компания предложила широкий диапазон услуг, начиная от
                     предварительного поиска похожих товарных знаков до полного
                     юридического сопровождения на всех этапах процесса
@@ -194,7 +274,7 @@
                 />
                 <div class="services__item_text">
                   <p>Регистрация лицензионного договора</p>
-                  <p class="services__item_text-mobile">
+                  <p class="services__item_text-mobile services__item_text-row">
                     Компания предложила широкий диапазон услуг, начиная от
                     предварительного поиска похожих товарных знаков до полного
                     юридического сопровождения на всех этапах процесса
@@ -219,7 +299,7 @@
                 />
                 <div class="services__item_text">
                   <p>Регистрация договора отчуждения</p>
-                  <p class="services__item_text-mobile">
+                  <p class="services__item_text-mobile services__item_text-row">
                     Компания предложила широкий диапазон услуг, начиная от
                     предварительного поиска похожих товарных знаков до полного
                     юридического сопровождения на всех этапах процесса
@@ -244,7 +324,7 @@
                 />
                 <div class="services__item_text">
                   <p>Подбор классов МКТУ</p>
-                  <p class="services__item_text-mobile">
+                  <p class="services__item_text-mobile services__item_text-row">
                     Компания предложила широкий диапазон услуг, начиная от
                     предварительного поиска похожих товарных знаков до полного
                     юридического сопровождения на всех этапах процесса
@@ -339,10 +419,38 @@
               <h1>Отзывы</h1>
               <div class="slider-buttons">
                 <button id="reviews-prev" class="slider-button">
-                  <img src="./assets/images/prev.svg" alt="back-button" />
+                  <img
+                    class="prev"
+                    src="./assets/images/prev.svg"
+                    alt="back-button"
+                  />
+                  <img
+                    class="prev-hover"
+                    src="./assets/images/prev-hover.svg"
+                    alt="back-button"
+                  />
+                  <img
+                    class="prev-inactive"
+                    src="./assets/images/prev-inactive.svg"
+                    alt="back-button"
+                  />
                 </button>
                 <button id="reviews-next" class="slider-button">
-                  <img src="./assets/images/next.svg" alt="forward-button" />
+                  <img
+                    class="next"
+                    src="./assets/images/next.svg"
+                    alt="forward-button"
+                  />
+                  <img
+                    class="next-hover"
+                    src="./assets/images/next-hover.svg"
+                    alt="back-button"
+                  />
+                  <img
+                    class="next-inactive"
+                    src="./assets/images/next-inactive.svg"
+                    alt="back-button"
+                  />
                 </button>
               </div>
             </div>
@@ -358,6 +466,11 @@
                           alt="icon-rating"
                         />
                         <img
+                          class="icon-rating-hover"
+                          src="./assets/images/rating-hover.svg"
+                          alt="icon-rating"
+                        />
+                        <img
                           class="icon-yandex-logo"
                           src="./assets/images/yandex-logo.svg"
                           alt="yandex-logo"
@@ -367,7 +480,10 @@
                         Я недавно воспользовался услугами компании “Patentrum” и
                         остался впечатлён их профессионализмом. Рекомендую эту
                         компанию всем, кто хочет защитить свой бренд без лишних
-                        хлопот.
+                        хлопот.Я недавно воспользовался услугами компании
+                        “Patentrum” и остался впечатлён их профессионализмом.
+                        Рекомендую эту компанию всем, кто хочет защитить свой
+                        бренд без лишних хлопот.
                       </p>
                     </div>
                     <div class="reviews__slide-bottom">
@@ -390,6 +506,11 @@
                         <img
                           class="icon-rating"
                           src="./assets/images/rating.svg"
+                          alt="icon-rating"
+                        />
+                        <img
+                          class="icon-rating-hover"
+                          src="./assets/images/rating-hover.svg"
                           alt="icon-rating"
                         />
                         <img
@@ -429,6 +550,11 @@
                           alt="icon-rating"
                         />
                         <img
+                          class="icon-rating-hover"
+                          src="./assets/images/rating-hover.svg"
+                          alt="icon-rating"
+                        />
+                        <img
                           class="icon-yandex-logo"
                           src="./assets/images/yandex-logo.svg"
                           alt="yandex-logo"
@@ -461,6 +587,11 @@
                         <img
                           class="icon-rating"
                           src="./assets/images/rating.svg"
+                          alt="icon-rating"
+                        />
+                        <img
+                          class="icon-rating-hover"
+                          src="./assets/images/rating-hover.svg"
                           alt="icon-rating"
                         />
                         <img
@@ -563,85 +694,282 @@
             <h1 class="text-white">Наша команда</h1>
             <div class="slider-buttons">
               <button id="team-prev" class="slider-button">
-                <img src="./assets/images/prev.svg" alt="back-button" />
+                <img
+                  class="prev"
+                  src="./assets/images/prev.svg"
+                  alt="back-button"
+                />
+                <img
+                  class="prev-hover"
+                  src="./assets/images/prev-hover.svg"
+                  alt="back-button"
+                />
+                <img
+                  class="prev-inactive"
+                  src="./assets/images/prev-inactive.svg"
+                  alt="back-button"
+                />
               </button>
               <button id="team-next" class="slider-button">
-                <img src="./assets/images/next.svg" alt="forward-button" />
+                <img
+                  class="next"
+                  src="./assets/images/next.svg"
+                  alt="forward-button"
+                />
+                <img
+                  class="next-hover"
+                  src="./assets/images/next-hover.svg"
+                  alt="back-button"
+                />
+                <img
+                  class="next-inactive"
+                  src="./assets/images/next-inactive.svg"
+                  alt="back-button"
+                />
               </button>
             </div>
           </div>
           <div class="slider__container team__slider swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide team__slide">
+              <div class="swiper-slide team__slide slide">
                 <img
                   src="./assets/images/team-photo.png"
                   alt="photo"
-                  class="slide-img"
+                  class="slide-img team__slide-img"
                 />
                 <div class="team__slide_content">
                   <p class="team__slide_title">IT developer</p>
-                  <p class="team__slide_name">Елена Крицкая</p>
+                  <button class="team__slide_name">Елена Крицкая</button>
                 </div>
+
+                <ul class="team__slide-info">
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">Елена Крицкая</p>
+                    <p class="txt18">
+                      Патентный проверенный,<br />
+                      дополнительный текст с описанием.<br />
+                      Можно написать в чем силен и что<br />
+                      умеет.<br />
+                      Полный текст описания может<br />
+                      занимать до 6 строк.
+                    </p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">1234</p>
+                    <p class="txt18">Номер статуса проверенного</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">10 лет</p>
+                    <p class="txt18">Стаж</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">200</p>
+                    <p class="txt18">Знаков зарегистрировал</p>
+                  </li>
+                </ul>
               </div>
 
               <div class="swiper-slide team__slide">
                 <img
                   src="./assets/images/team-photo.png"
                   alt="photo"
-                  class="slide-img"
+                  class="slide-img team__slide-img"
                 />
                 <div class="team__slide_content">
                   <p class="team__slide_title">IT developer</p>
-                  <p class="team__slide_name">Елена Крицкая</p>
+                  <button class="team__slide_name">Елена Крицкая</button>
                 </div>
+                <ul class="team__slide-info">
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">Елена Крицкая</p>
+                    <p class="txt18">
+                      Патентный проверенный,<br />
+                      дополнительный текст с описанием.<br />
+                      Можно написать в чем силен и что<br />
+                      умеет.<br />
+                      Полный текст описания может<br />
+                      занимать до 6 строк.
+                    </p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">1234</p>
+                    <p class="txt18">Номер статуса проверенного</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">10 лет</p>
+                    <p class="txt18">Стаж</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">200</p>
+                    <p class="txt18">Знаков зарегистрировал</p>
+                  </li>
+                </ul>
               </div>
 
               <div class="swiper-slide team__slide">
                 <img
                   src="./assets/images/team-photo.png"
                   alt="photo"
-                  class="slide-img"
+                  class="slide-img team__slide-img"
                 />
                 <div class="team__slide_content">
                   <p class="team__slide_title">IT developer</p>
-                  <p class="team__slide_name">Елена Крицкая</p>
+                  <button class="team__slide_name">Елена Крицкая</button>
                 </div>
+                <ul class="team__slide-info">
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">Елена Крицкая</p>
+                    <p class="txt18">
+                      Патентный проверенный,<br />
+                      дополнительный текст с описанием.<br />
+                      Можно написать в чем силен и что<br />
+                      умеет.<br />
+                      Полный текст описания может<br />
+                      занимать до 6 строк.
+                    </p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">1234</p>
+                    <p class="txt18">Номер статуса проверенного</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">10 лет</p>
+                    <p class="txt18">Стаж</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">200</p>
+                    <p class="txt18">Знаков зарегистрировал</p>
+                  </li>
+                </ul>
               </div>
 
               <div class="swiper-slide team__slide">
                 <img
                   src="./assets/images/team-photo.png"
                   alt="photo"
-                  class="slide-img"
+                  class="slide-img team__slide-img"
                 />
                 <div class="team__slide_content">
                   <p class="team__slide_title">IT developer</p>
-                  <p class="team__slide_name">Елена Крицкая</p>
+                  <button class="team__slide_name">Елена Крицкая</button>
                 </div>
+                <ul class="team__slide-info">
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">Елена Крицкая</p>
+                    <p class="txt18">
+                      Патентный проверенный,<br />
+                      дополнительный текст с описанием.<br />
+                      Можно написать в чем силен и что<br />
+                      умеет.<br />
+                      Полный текст описания может<br />
+                      занимать до 6 строк.
+                    </p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">1234</p>
+                    <p class="txt18">Номер статуса проверенного</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">10 лет</p>
+                    <p class="txt18">Стаж</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">200</p>
+                    <p class="txt18">Знаков зарегистрировал</p>
+                  </li>
+                </ul>
               </div>
 
               <div class="swiper-slide team__slide">
                 <img
                   src="./assets/images/team-photo.png"
                   alt="photo"
-                  class="slide-img"
+                  class="slide-img team__slide-img"
                 />
                 <div class="team__slide_content">
                   <p class="team__slide_title">IT developer</p>
-                  <p class="team__slide_name">Елена Крицкая</p>
+                  <button class="team__slide_name">Елена Крицкая</button>
                 </div>
+                <ul class="team__slide-info">
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">Елена Крицкая</p>
+                    <p class="txt18">
+                      Патентный проверенный,<br />
+                      дополнительный текст с описанием.<br />
+                      Можно написать в чем силен и что<br />
+                      умеет.<br />
+                      Полный текст описания может<br />
+                      занимать до 6 строк.
+                    </p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">1234</p>
+                    <p class="txt18">Номер статуса проверенного</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">10 лет</p>
+                    <p class="txt18">Стаж</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">200</p>
+                    <p class="txt18">Знаков зарегистрировал</p>
+                  </li>
+                </ul>
               </div>
 
               <div class="swiper-slide team__slide">
                 <img
                   src="./assets/images/team-photo.png"
                   alt="photo"
-                  class="slide-img"
+                  class="slide-img team__slide-img"
                 />
                 <div class="team__slide_content">
                   <p class="team__slide_title">IT developer</p>
-                  <p class="team__slide_name">Елена Крицкая</p>
+                  <button class="team__slide_name">Елена Крицкая</button>
                 </div>
+                <ul class="team__slide-info">
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">Елена Крицкая</p>
+                    <p class="txt18">
+                      Патентный проверенный,<br />
+                      дополнительный текст с описанием.<br />
+                      Можно написать в чем силен и что<br />
+                      умеет.<br />
+                      Полный текст описания может<br />
+                      занимать до 6 строк.
+                    </p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">1234</p>
+                    <p class="txt18">Номер статуса проверенного</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">10 лет</p>
+                    <p class="txt18">Стаж</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">200</p>
+                    <p class="txt18">Знаков зарегистрировал</p>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -653,7 +981,7 @@
           <div class="slider__top blog__top">
             <h1 class="text-white">Блог</h1>
             <button class="btn btn-blue btn-primary" type="submit">
-              Подписаться на рассылку
+              перейти к статьям
             </button>
           </div>
 
@@ -667,43 +995,53 @@
                       src="./assets/images/blog-img1.png"
                       alt="background"
                     />
-                    <p class="blog__slide-title text-center">
-                      Регистрация товарного знака
-                    </p>
+                    <p class="txt20_bold">Регистрация товарного знака</p>
                   </div>
+
                   <div class="blog__slide-bottom">
                     <div class="blog__slide-info">
                       <div class="blog__slide-info_top">
-                        <p class="blog__slide-info_top-text text-white">
+                        <p class="txt16 blog__slide-info_top-text text-white">
                           Новость
                         </p>
-                        <p class="text-white">24.09.2024</p>
+                        <p class="txt16 text-white">24.09.2024</p>
                       </div>
-                      <p class="blog__slide-title blog__slide-title_mobile">
+                      <p class="txt20_bold color-bl-hover">
                         Регистрация товарного знака
                       </p>
-                      <p class="blog__slide-text">
+                      <p class="txt18 txt-clamp-4 blog__slide-text">
+                        Регистрация товарного знака — это важный шаг для защиты
+                        бренда и интеллектуальной собственности. Товарный знак
+                        представляет собой уникальный символ, название или...
                         Регистрация товарного знака — это важный шаг для защиты
                         бренда и интеллектуальной собственности. Товарный знак
                         представляет собой уникальный символ, название или...
                       </p>
                     </div>
+
                     <button class="btn btn-primary blog__button-mobile">
                       читать полностью
                     </button>
                     <div class="blog__slide-icons">
                       <button class="blog__slide-comment">
                         <img
+                          class="icon-comment"
                           src="./assets/images/Icon-comment.svg"
                           alt="icon-comment"
                         />
-                        <p class="text-white">10</p>
+                        <img
+                          class="icon-comment-bl"
+                          src="./assets/images/icon-comment-bl.svg"
+                          alt="icon-comment"
+                        />
+                        <p class="txt18 text-white">10</p>
                       </button>
-                      <img
-                        class="icon-arrow"
-                        alt="icon-arrow"
-                        src="./assets/images/icon-arrow.svg"
-                      />
+                      <a href="#"
+                        ><img
+                          class="icon-arrow"
+                          alt="icon-arrow"
+                          src="./assets/images/icon-arrow.svg"
+                      /></a>
                     </div>
                   </div>
                 </div>
@@ -717,43 +1055,53 @@
                       src="./assets/images/blog-img1.png"
                       alt="background"
                     />
-                    <p class="blog__slide-title text-center">
-                      Подбор классов МКТУ
-                    </p>
+                    <p class="txt20_bold">Регистрация товарного знака</p>
                   </div>
+
                   <div class="blog__slide-bottom">
                     <div class="blog__slide-info">
                       <div class="blog__slide-info_top">
-                        <p class="blog__slide-info_top-text text-white">
-                          Подбор классов МКТУ
+                        <p class="txt16 blog__slide-info_top-text text-white">
+                          Новость
                         </p>
-                        <p class="text-white">24.09.2024</p>
+                        <p class="text-white txt16">24.09.2024</p>
                       </div>
-                      <p class="blog__slide-title blog__slide-title_mobile">
+                      <p class="txt20_bold color-bl-hover">
                         Регистрация товарного знака
                       </p>
-                      <p class="blog__slide-text">
+                      <p class="txt18 txt-clamp-4 blog__slide-text">
+                        Регистрация товарного знака — это важный шаг для защиты
+                        бренда и интеллектуальной собственности. Товарный знак
+                        представляет собой уникальный символ, название или...
                         Регистрация товарного знака — это важный шаг для защиты
                         бренда и интеллектуальной собственности. Товарный знак
                         представляет собой уникальный символ, название или...
                       </p>
                     </div>
+
                     <button class="btn btn-primary blog__button-mobile">
                       читать полностью
                     </button>
                     <div class="blog__slide-icons">
                       <button class="blog__slide-comment">
                         <img
+                          class="icon-comment"
                           src="./assets/images/Icon-comment.svg"
                           alt="icon-comment"
                         />
-                        <p class="text-white">10</p>
+                        <img
+                          class="icon-comment-bl"
+                          src="./assets/images/icon-comment-bl.svg"
+                          alt="icon-comment"
+                        />
+                        <p class="txt18 text-white">10</p>
                       </button>
-                      <img
-                        class="icon-arrow"
-                        alt="icon-arrow"
-                        src="./assets/images/icon-arrow.svg"
-                      />
+                      <a href="#"
+                        ><img
+                          class="icon-arrow"
+                          alt="icon-arrow"
+                          src="./assets/images/icon-arrow.svg"
+                      /></a>
                     </div>
                   </div>
                 </div>
@@ -767,43 +1115,53 @@
                       src="./assets/images/blog-img1.png"
                       alt="background"
                     />
-                    <p class="blog__slide-title text-center">
-                      Регистрация товарного знака
-                    </p>
+                    <p class="txt20_bold">Регистрация товарного знака</p>
                   </div>
+
                   <div class="blog__slide-bottom">
                     <div class="blog__slide-info">
                       <div class="blog__slide-info_top">
-                        <p class="blog__slide-info_top-text text-white">
+                        <p class="txt16 blog__slide-info_top-text text-white">
                           Новость
                         </p>
-                        <p class="text-white">24.09.2024</p>
+                        <p class="txt16 text-white">24.09.2024</p>
                       </div>
-                      <p class="blog__slide-title blog__slide-title_mobile">
-                        Регистрация товарного знака
+                      <p class="txt20_bold color-bl-hover">
+                        Регистрация товарного знака онлайн
                       </p>
-                      <p class="blog__slide-text">
+                      <p class="txt18 txt-clamp-3 blog__slide-text">
+                        Регистрация товарного знака — это важный шаг для защиты
+                        бренда и интеллектуальной собственности. Товарный знак
+                        представляет собой уникальный символ, название или...
                         Регистрация товарного знака — это важный шаг для защиты
                         бренда и интеллектуальной собственности. Товарный знак
                         представляет собой уникальный символ, название или...
                       </p>
                     </div>
+
                     <button class="btn btn-primary blog__button-mobile">
                       читать полностью
                     </button>
                     <div class="blog__slide-icons">
                       <button class="blog__slide-comment">
                         <img
+                          class="icon-comment"
                           src="./assets/images/Icon-comment.svg"
                           alt="icon-comment"
                         />
-                        <p class="text-white">10</p>
+                        <img
+                          class="icon-comment-bl"
+                          src="./assets/images/icon-comment-bl.svg"
+                          alt="icon-comment"
+                        />
+                        <p class="txt18 text-white">10</p>
                       </button>
-                      <img
-                        class="icon-arrow"
-                        alt="icon-arrow"
-                        src="./assets/images/icon-arrow.svg"
-                      />
+                      <a href="#"
+                        ><img
+                          class="icon-arrow"
+                          alt="icon-arrow"
+                          src="./assets/images/icon-arrow.svg"
+                      /></a>
                     </div>
                   </div>
                 </div>
@@ -817,43 +1175,53 @@
                       src="./assets/images/blog-img1.png"
                       alt="background"
                     />
-                    <p class="blog__slide-title text-center">
-                      Регистрация товарного знака
-                    </p>
+                    <p class="txt20_bold">Регистрация товарного знака</p>
                   </div>
+
                   <div class="blog__slide-bottom">
                     <div class="blog__slide-info">
                       <div class="blog__slide-info_top">
-                        <p class="blog__slide-info_top-text text-white">
+                        <p class="txt16 blog__slide-info_top-text text-white">
                           Новость
                         </p>
-                        <p class="text-white">24.09.2024</p>
+                        <p class="txt16 text-white">24.09.2024</p>
                       </div>
-                      <p class="blog__slide-title blog__slide-title_mobile">
-                        Регистрация товарного знака
+                      <p class="txt20_bold color-bl-hover">
+                        Регистрация товарного знака онлайн
                       </p>
-                      <p class="blog__slide-text">
+                      <p class="txt18 txt-clamp-3 blog__slide-text">
+                        Регистрация товарного знака — это важный шаг для защиты
+                        бренда и интеллектуальной собственности. Товарный знак
+                        представляет собой уникальный символ, название или...
                         Регистрация товарного знака — это важный шаг для защиты
                         бренда и интеллектуальной собственности. Товарный знак
                         представляет собой уникальный символ, название или...
                       </p>
                     </div>
+
                     <button class="btn btn-primary blog__button-mobile">
                       читать полностью
                     </button>
                     <div class="blog__slide-icons">
                       <button class="blog__slide-comment">
                         <img
+                          class="icon-comment"
                           src="./assets/images/Icon-comment.svg"
                           alt="icon-comment"
                         />
-                        <p class="text-white">10</p>
+                        <img
+                          class="icon-comment-bl"
+                          src="./assets/images/icon-comment-bl.svg"
+                          alt="icon-comment"
+                        />
+                        <p class="txt18 text-white">10</p>
                       </button>
-                      <img
-                        class="icon-arrow"
-                        alt="icon-arrow"
-                        src="./assets/images/icon-arrow.svg"
-                      />
+                      <a href="#"
+                        ><img
+                          class="icon-arrow"
+                          alt="icon-arrow"
+                          src="./assets/images/icon-arrow.svg"
+                      /></a>
                     </div>
                   </div>
                 </div>
@@ -862,10 +1230,38 @@
           </div>
           <div class="slider-buttons blog__buttons">
             <button id="blog-prev" class="slider-button">
-              <img src="./assets/images/prev.svg" alt="back-button" />
+              <img
+                class="prev"
+                src="./assets/images/prev.svg"
+                alt="back-button"
+              />
+              <img
+                class="prev-hover"
+                src="./assets/images/prev-hover.svg"
+                alt="back-button"
+              />
+              <img
+                class="prev-inactive"
+                src="./assets/images/prev-inactive.svg"
+                alt="back-button"
+              />
             </button>
             <button id="blog-next" class="slider-button">
-              <img src="./assets/images/next.svg" alt="forward-button" />
+              <img
+                class="next"
+                src="./assets/images/next.svg"
+                alt="forward-button"
+              />
+              <img
+                class="next-hover"
+                src="./assets/images/next-hover.svg"
+                alt="back-button"
+              />
+              <img
+                class="next-inactive"
+                src="./assets/images/next-inactive.svg"
+                alt="back-button"
+              />
             </button>
           </div>
         </div>
@@ -873,46 +1269,66 @@
 
       <section class="support container">
         <div class="support__content">
-          <form class="support__form" action="">
-            <div class="support__text-box">
+          <form class="form" id="form" novalidate>
+            <div class="form__txt-box">
               <h1>Нужна помощь?</h1>
-              <p class="support__text">
+              <p class="form__txt">
                 Наш менеджер проконсультирует Вас по услугам на сайте
               </p>
             </div>
-            <div class="support__inputs">
-              <div class="support__number-name">
-                <input
-                  class="support__input"
-                  type="text"
-                  placeholder="Имя"
-                  required
-                />
-                <input
-                  class="support__input"
-                  type="tel"
-                  placeholder="+7 (___) ___-__-__"
-                  required
-                />
+            <div class="form-inputs">
+              <div class="form__number-name">
+                <label class="form-label">
+                  <input
+                    id="name"
+                    class="form-input"
+                    type="text"
+                    placeholder="Имя"
+                    required
+                  />
+                  <span class="error-message" id="name-error"></span>
+                </label>
+
+                <label class="form-label">
+                  <input
+                    id="phone"
+                    class="form-input"
+                    type="tel"
+                    placeholder="+7 (___) ___-__-__"
+                    required
+                  />
+                  <span class="error-message" id="phone-error"></span>
+                </label>
               </div>
-              <input
-                class="support__input"
-                type="text"
-                placeholder="Ваш вопрос"
-                required
-              />
-            </div>
-            <div class="support__form_bottom">
-              <label class="support__data-consent">
+
+              <label class="form-label">
                 <input
+                  id="question"
+                  class="form-input"
+                  type="text"
+                  placeholder="Ваш вопрос"
+                  required
+                />
+                <span class="error-message" id="question-error"></span>
+              </label>
+            </div>
+            <div class="form-bottom">
+              <label class="form-label form__data-consent">
+                <input
+                  class="form-checkbox"
                   type="checkbox"
-                  name="dataConsent"
-                  style="height: 24px; width: 24px; border: 1px solid #4ebdf5"
+                  id="dataConsent"
                   required
                 />
                 Я согласен на обработку персональных данных
+                <span class="error-message-checkbox" id="consent-error"></span>
               </label>
-              <button class="btn btn-blue btn-primary" type="submit">
+              <button
+                class="btn btn-blue btn-primary"
+                type="submit"
+                data-modal="modal-bid"
+                id="submitBtn"
+              >
                 Отправить
               </button>
             </div>
@@ -932,13 +1348,32 @@
               <p class="footer__logo">PatentRum</p>
               <a class="footer__registr">Регистрация товарного знака онлайн</a>
             </div>
-            <div class="footer__data-consen">
-              <a class="footer__data-consen_link" href="#"
-                >Политика конфиденциальности</a
-              >
-              <a class="footer__data-consen_link" href="#"
-                >Обработка персональных данных</a
-              >
+            <div class="footer__mobile-absolute">
+              <div class="footer__data-consen">
+                <a class="footer__data-consen_link" href="#"
+                  >Политика конфиденциальности</a
+                >
+                <a class="footer__data-consen_link" href="#"
+                  >Обработка персональных данных</a
+                >
+              </div>
+              <div class="footer__set-cards">
+                <img
+                  class="footer__card"
+                  src="./assets/images/world-card.svg"
+                  alt="world-card"
+                />
+                <img
+                  class="footer__card"
+                  src="./assets/images//visa-card.svg"
+                  alt="visa-card"
+                />
+                <img
+                  class="footer__card"
+                  src="./assets/images/master-card.svg"
+                  alt="world-card"
+                />
+              </div>
             </div>
           </div>
 
@@ -1013,6 +1448,12 @@
                 ><img src="./assets/images/icon-v.svg" alt="icon-v"
               /></a>
             </div>
+            <button
+              class="btn btn-blue btn-primary hide-mobile"
+              data-modal="modal-nl"
+            >
+              Подписаться на рассылку
+            </button>
           </div>
           <div class="footer__right">
             <a class="footer__right_link" href="#">
@@ -1031,9 +1472,16 @@
         </div>
       </footer>
     </main>
+    <script src="./js/modal.js" defer></script>
+    <script src="./index.js" defer></script>
+    <script src="https://unpkg.com/imask" defer></script>
+    <script src="./js/validateForm.js" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <script src="./js/slider.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      defer
+    ></script>
     <script src="./js/marquee.js" defer></script>
     <script src="./js/blog.js" defer></script>
     <script src="./js/workflow.js" defer></script>

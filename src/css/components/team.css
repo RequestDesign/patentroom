@@ -83,8 +83,6 @@
   top: 0rem;
   left: 0rem;
   background-color: #15161a;
-  transition: opacity 0.3s ease;
-  transition: background-color 0.3s ease;
   display: flex;
   flex-direction: column;
   gap: 2rem;

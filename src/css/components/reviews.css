@@ -8,7 +8,7 @@
 }
 
 .reviews__slide-box {
-  transition: background-color 1s ease;
+  transition: background-color 0.5s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,7 +45,7 @@
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 140%;
-  transition: color 1s ease;
+  transition: color 0.5s ease;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 6;
@@ -83,7 +83,7 @@
   width: 17.6rem;
   height: 4.4rem;
   opacity: 100%;
-  transition: color 1s ease;
+  transition: color 0.5s ease;
   @media (max-width: 48rem) {
     width: 35.3rem;
     height: 8.8rem;
@@ -97,7 +97,7 @@
   position: absolute;
   left: 0px;
   top: 0px;
-  transition: color 1s ease;
+  transition: color 0.5s ease;
 }
 @media (min-width: 48rem) {
   .reviews__slide-box:hover {

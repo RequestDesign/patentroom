@@ -160,6 +160,10 @@
   }
 }
 
+.form-checkbox:checked {
+  background-color: #4ebdf5;
+}
+
 .form-checkbox:checked::before {
   content: "";
   position: absolute;
@@ -167,8 +171,8 @@
   height: 70%;
   top: 15%;
   left: 15%;
-  background: #4ebdf5;
-  clip-path: polygon(14% 44%, 34% 58%, 70% 15%, 82% 28%, 34% 78%, 7% 50%);
+  background: white;
+  clip-path: polygon(25% 50%, 34% 58%, 70% 15%, 82% 28%, 34% 78%, 7% 50%);
   @media (max-width: 48em) {
     width: 60%;
     height: 60%;

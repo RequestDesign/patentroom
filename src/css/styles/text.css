@@ -18,6 +18,17 @@
   }
 }
 
+.txt18_bold {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 144.444%;
+  @media (max-width: 48rem) {
+    font-size: 2.8rem;
+    line-height: 140%;
+  }
+}
+
 .txt22 {
   font-size: 2.2rem;
   font-weight: 400;
@@ -28,7 +39,7 @@
   }
 }
 
-.txt36 {
+.txt36-days {
   color: var(--Black, #15161a);
   font-family: "Days One";
   font-size: 3.6rem;
@@ -47,5 +58,28 @@
   opacity: 80%;
   @media (max-width: 48rem) {
     font-size: 2.8rem;
+  }
+}
+
+.txt18-days {
+  color: #fff;
+  font-family: "Days One";
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+  @media (max-width: 48rem) {
+    font-size: 3.2rem;
+  }
+}
+
+.txt24-days {
+  font-family: "Days One";
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+  @media (max-width: 48rem) {
+    font-size: 3.6rem;
   }
 }

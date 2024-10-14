@@ -130,8 +130,7 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-section {
-}
+
 @media (min-width: 1680px) {
   html {
     font-size: 10px;

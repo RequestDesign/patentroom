@@ -20,6 +20,7 @@ $(document).ready(function () {
 //   $(".modal-bidl").addClass("modal-active");
 // });
 
+//модалка каклькулятор
 $(document).ready(function () {
   $(".modal-calc__right-item").on(
     "click",
@@ -33,4 +34,55 @@ $(document).ready(function () {
       $(this).addClass("active");
     }
   );
+});
+
+//модалка для карточки поиска
+$(document).ready(function () {
+  function adjustText() {
+    // Устанавливаем количество символов для десктопа и мобильных устройств
+    var lettersToCutDesktop = 250; // Максимальное количество символов для десктопа
+    var lettersToCutMobile = 170; // Максимальное количество символов для мобильных
+
+    // Проверяем ширину экрана
+    var isMobile = $(window).width() <= 768; // Определяем, мобильное устройство или нет
+
+    // Устанавливаем нужное количество символов в зависимости от устройства
+    var lettersToCut = isMobile ? lettersToCutMobile : lettersToCutDesktop;
+
+    $(".modal-search__class").each(function () {
+      var contentWrapper = $(this); // Обращаемся к каждому отдельному элементу
+      var contentText = contentWrapper.data("original-text"); // Получаем полный текст из data-атрибута
+
+      // Если это первая загрузка, сохраняем полный текст в data-атрибут
+      if (!contentText) {
+        contentText = contentWrapper.text().trim(); // Получаем полный текст
+        contentWrapper.data("original-text", contentText); // Сохраняем его для дальнейшего использования
+      }
+
+      // Проверяем, если текст превышает максимальную длину
+      if (contentText.length > lettersToCut) {
+        var visibleText = contentText.substr(0, lettersToCut); // Обрезаем текст
+        contentWrapper.html(
+          visibleText + "... <button class='txt-btn'>читать далее</button>"
+        ); // Добавляем кнопку "Читать далее"
+      } else {
+        contentWrapper.html(contentText); // Если текст меньше, показываем полный текст
+      }
+    });
+  }
+
+  adjustText();
+
+  // Добавляем обработчик события на изменение размера экрана
+  $(window).resize(function () {
+    adjustText(); // Перезапускаем логику обрезки текста при изменении размера экрана
+  });
+
+  // Обработчик клика по кнопке "Читать далее"
+  $(document).on("click", ".txt-btn", function (e) {
+    e.preventDefault();
+    var contentWrapper = $(this).parent(); // Обращаемся к родительскому элементу (элементу с текстом)
+    var originalText = contentWrapper.data("original-text"); // Получаем полный текст из data-атрибута
+    contentWrapper.html(originalText); // Восстанавливаем полный текст
+  });
 });

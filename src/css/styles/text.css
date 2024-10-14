@@ -61,6 +61,15 @@
   }
 }
 
+.txt16_bold {
+  font-size: 1.6rem;
+  font-weight: 700;
+  @media (max-width: 48rem) {
+    font-size: 2.8rem;
+    line-height: 140%;
+  }
+}
+
 .txt18-days {
   color: #fff;
   font-family: "Days One";
@@ -70,6 +79,15 @@
   text-transform: uppercase;
   @media (max-width: 48rem) {
     font-size: 3.2rem;
+  }
+}
+.txt18-gilory {
+  font-family: "Gilroy";
+  font-size: 1.8rem;
+  font-weight: 400;
+  @media (max-width: 48rem) {
+    font-size: 2.8rem;
+    line-height: normal;
   }
 }
 
@@ -82,4 +100,17 @@
   @media (max-width: 48rem) {
     font-size: 3.6rem;
   }
+}
+
+.txt22_bold {
+  font-size: 2.2rem;
+  font-weight: 600;
+  @media (max-width: 48rem) {
+    font-size: 3.2rem;
+  }
+}
+
+.txt20 {
+  font-size: 2rem;
+  font-weight: 500;
 }

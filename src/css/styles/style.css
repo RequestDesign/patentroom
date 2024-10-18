@@ -51,7 +51,6 @@
   gap: 1.6rem;
   color: #4ebdf5;
   background-color: transparent;
-  border: 2px solid #4ebdf5; /* Outline вместо border */
   border-radius: 20rem;
   font-family: "Days One", sans-serif;
   line-height: 125%;
@@ -68,6 +67,33 @@
     gap: 3.2rem;
     font-size: 2.4rem;
     line-height: 166.667%;
+  }
+}
+
+.btn::after {
+  top: 0px;
+  left: 0px;
+  content: "";
+  position: absolute;
+  border: 2px solid #4ebdf5;
+  height: 100%;
+  width: 100%;
+  border-radius: 20rem;
+  transition: border 0.3s ease;
+}
+
+.icon-set {
+  width: 5.6rem;
+  height: 100%;
+  border-radius: 100px;
+  background-color: #4ebdf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 48rem) {
+    width: 9.2rem;
+    height: 9.2rem;
   }
 }
 
@@ -88,6 +114,10 @@
   background-color: rgba(174, 188, 195, 1) !important;
   color: white !important;
   transition: none !important;
+}
+.button-inactive::after,
+.button-inactive:hover::after {
+  border: rgba(174, 188, 195, 1);
 }
 
 .button-inactive.btn-blue {
@@ -121,6 +151,12 @@
     box-shadow: inset 0 0 0 2px #9be931;
   }
 
+  .btn:hover::after {
+    border: 2px solid #9be931;
+  }
+  .button-inactive:hover::after {
+    border-color: rgba(174, 188, 195, 1);
+  }
   .btn:hover::before {
     left: 0;
     top: 0;
@@ -130,22 +166,6 @@
     background-color: #9be931;
     transition: background-color 0s ease;
     box-shadow: 0 0 0 2px #9be931;
-  }
-}
-
-.icon-set {
-  width: 5.4rem;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #4ebdf5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid transparent; /* Прозрачная граница, чтобы избежать рендеринга */
-  box-shadow: 0 0 0 2px #4ebdf5;
-  @media (max-width: 48rem) {
-    width: 9.2rem;
-    height: 9.2rem;
   }
 }
 

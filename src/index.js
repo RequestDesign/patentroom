@@ -86,3 +86,32 @@ $(document).ready(function () {
     contentWrapper.html(originalText); // Восстанавливаем полный текст
   });
 });
+
+//cat-pricing
+$(document).ready(function () {
+  $(".cat-pricing__cat-btn").on("click", function () {
+    const $thisButton = $(this); // Сохраняем ссылку на кликнутую кнопку
+    const $parentItem = $thisButton.closest(".cat-pricing__cat-item"); // Находим родительский элемент
+    const $subList = $parentItem.find(".cat-pricing__sub-list"); // Ищем соответствующий подсписок
+
+    // Переключаем видимость подсписка с анимацией
+    $subList.stop(true, true).slideToggle(300); // 300ms для плавного открытия/закрытия
+
+    // Переключаем класс для кнопки (иконка плюс/минус)
+    $thisButton.toggleClass("active");
+  });
+});
+
+//question
+
+$(document).ready(function () {
+  $(".questions__item-btn").on("click", function () {
+    const $thisButton = $(this);
+    const $parentItem = $thisButton.closest(".questions__item");
+    const $subList = $parentItem.find(".question__item-toggle");
+
+    $subList.stop(true, true).slideToggle(200);
+
+    $thisButton.toggleClass("active");
+  });
+});

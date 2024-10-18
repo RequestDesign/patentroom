@@ -10,6 +10,8 @@
     flex-direction: column;
     padding: 2.8rem;
     border-radius: 4.8rem;
+    margin-bottom: 12.4rem;
+    position: relative;
   }
 }
 
@@ -24,7 +26,7 @@
   }
 }
 
-.trademark_text {
+.trademark_top {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
@@ -33,7 +35,7 @@
   }
 }
 
-.trademark_registration-search {
+.trademark_left-btm {
   display: flex;
   gap: 3.2rem;
   @media (max-width: 48em) {

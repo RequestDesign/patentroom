@@ -1,9 +1,9 @@
 .header {
   width: 100%;
-  margin: 3.8rem 0rem 3rem;
+  padding: 3.8rem 0rem 3rem;
 
   @media (max-width: 48em) {
-    margin: 3.2rem 0rem;
+    padding: 3.2rem 0rem;
   }
 }
 

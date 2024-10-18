@@ -1,0 +1,135 @@
+.dtl-srvcs-back {
+  background-image: url(../../assets/images/back-d-srvcs.png);
+}
+
+.dtl-srvcs {
+  display: flex;
+  flex-direction: column;
+  gap: 18rem;
+  @media (max-width: 48rem) {
+    gap: 20rem;
+  }
+}
+
+.trademark-dtl-srvcs_img {
+  width: 54.3rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}
+
+.trademark-dtl-srvcs_right {
+  width: 54.3rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}
+
+.trademark-dtl-srvcs_rating {
+  left: -17.5rem;
+  bottom: 23rem;
+  @media (max-width: 48rem) {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6.2rem;
+  }
+}
+
+.trademark-dtl-srvcs_left {
+  width: 90.4rem;
+  gap: 5.4rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    gap: 4.8rem;
+  }
+}
+
+.trademark-dtl-srvcs .txt22 {
+  max-width: 77.3rem;
+}
+
+.trademark-dtl-srvcs .nav-dot {
+  color: #15161a;
+  background-color: #15161a;
+}
+
+.trademark-dtl-srvcs .nav-link {
+  color: #15161a;
+}
+
+.trademark-dtl-srvcs .trademark_content {
+  align-items: start;
+}
+
+.trademark-dtl-srvcs_left-btm {
+  display: flex;
+  flex-direction: column;
+  gap: 4.4rem;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+  }
+}
+
+.trademark-dtl-srvcs_cards {
+  display: flex;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    gap: 1.6rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: absolute;
+    width: calc(100% - 2.8rem);
+  }
+}
+
+.trademark-dtl-srvcs_cards::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.trademark-dtl-srvcs_card {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.2rem;
+  padding: 2.4rem;
+  border-radius: 3.2rem;
+  border: 2px solid #4ebdf5;
+  width: 38rem;
+  height: 13.6rem;
+  @media (max-width: 48rem) {
+    padding: 2.8rem;
+    border-radius: 2.8rem;
+    height: 21.2rem;
+    flex: 0 0 55.8rem;
+  }
+}
+
+.trademark-dtl-srvcs_card-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trademark-dtl-srvcs_card-img {
+  width: 5.4rem;
+  height: 5.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 48rem) {
+    width: 9.6rem;
+    height: max-content;
+  }
+}
+
+.trademark-dtl-srvcs .txt18 {
+  color: #15161a;
+  line-height: 140%;
+}
+
+.trademark-dtl-srvcs_cards-box {
+  @media (max-width: 48rem) {
+    height: 21.2rem;
+  }
+}

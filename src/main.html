@@ -12,6 +12,7 @@
     <title>Главная</title>
   </head>
   <body class="background-main">
+    <!-- модалка меню -->
     <div class="modal modal-2 modal-menu" id="modal-menu">
       <div class="modal-2-container">
         <header class="header">
@@ -34,7 +35,9 @@
               </div>
 
               <div class="button-group">
-                <button class="btn btn-primary hide-mobile">Войти</button>
+                <a href="./signin.html" class="btn btn-primary hide-mobile"
+                  >Войти</a
+                >
                 <button class="btn btn-secondary header__btn modal-close-menu">
                   <span class="hide-mobile">меню</span>
                   <div class="icon-set">
@@ -561,7 +564,9 @@
             </div>
 
             <div class="button-group">
-              <button class="btn btn-primary hide-mobile">Войти</button>
+              <a href="./signin.html" class="btn btn-primary hide-mobile"
+                >Войти</a
+              >
               <button
                 class="btn btn-secondary header__btn"
                 data-modal="modal-menu"
@@ -585,7 +590,7 @@
       <section class="trademark container">
         <div class="trademark_content">
           <div class="trademark_left">
-            <div class="trademark_text">
+            <div class="trademark_top">
               <h1>Регистрация товарного знака онлайн</h1>
               <p class="txt22">
                 После регистрации товарного знака PatentRum продолжает оказывать
@@ -593,7 +598,7 @@
                 защите своего товарного знака
               </p>
             </div>
-            <div class="trademark_registration-search">
+            <div class="trademark_left-btm">
               <button class="btn btn-blue btn-primary">
                 Зарегистрироваться
               </button>
@@ -802,33 +807,51 @@
         </div>
       </section>
 
-      <div class="main__workflow">
+      <div class="workflow-box">
         <section class="workflow container">
           <div class="workflow__block">
             <h1>как работает сервис</h1>
 
             <div class="workflow__info">
-              <div class="workflow__list" tabindex="0">
-                <button class="workflow__item">
-                  <p class="workflow__item-number">01</p>
-                  <p class="workflow__item-subtitle">Регистрация</p>
-                </button>
-                <button class="workflow__item">
-                  <p class="workflow__item-number">02</p>
-                  <p class="workflow__item-subtitle">Подача заявки</p>
-                </button>
-                <button class="workflow__item">
-                  <p class="workflow__item-number">03</p>
-                  <p class="workflow__item-subtitle">Проверка</p>
-                </button>
-                <button class="workflow__item">
-                  <p class="workflow__item-number">04</p>
-                  <p class="workflow__item-subtitle">Подача документов</p>
-                </button>
-                <button class="workflow__item">
-                  <p class="workflow__item-number">05</p>
-                  <p class="workflow__item-subtitle">Получение сертификата</p>
-                </button>
+              <div class="workflow__info-top">
+                <div class="workflow__list" tabindex="0">
+                  <button class="workflow__item">
+                    <p class="workflow__item-number">01</p>
+                    <p class="workflow__item-subtitle">
+                      Регистрируйтесь<br />
+                      в ЛК
+                    </p>
+                  </button>
+                  <button class="workflow__item">
+                    <p class="workflow__item-number">02</p>
+                    <p class="workflow__item-subtitle">
+                      Заполните<br />
+                      заявку
+                    </p>
+                  </button>
+                  <button class="workflow__item">
+                    <p class="workflow__item-number">03</p>
+                    <p class="workflow__item-subtitle">
+                      Мы<br />
+                      ее проверим
+                    </p>
+                  </button>
+                  <button class="workflow__item">
+                    <p class="workflow__item-number">04</p>
+                    <p class="workflow__item-subtitle">
+                      Подадим заявку<br />
+                      в Роспатент
+                    </p>
+                  </button>
+                  <button class="workflow__item">
+                    <p class="workflow__item-number">05</p>
+                    <p class="workflow__item-subtitle">
+                      Отправим Вам<br />
+                      свидетельство
+                    </p>
+                  </button>
+                  <div class="br-mobile"></div>
+                </div>
               </div>
               <p class="workflow__description">
                 Если заявка соответствует всем требованиям, начинается
@@ -862,12 +885,33 @@
               </p>
             </div>
           </div>
-
-          <img
-            class="workflow__img"
-            src="./assets/images/workflow-img.png"
-            alt="image"
-          />
+          <div class="workflow__img-box">
+            <img
+              src="./assets/images/workflow-img1.png"
+              alt="image"
+              class="workflow__img"
+            />
+            <img
+              src="./assets/images/workflow-img2.png"
+              alt="image"
+              class="workflow__img"
+            />
+            <img
+              src="./assets/images/workflow-img3.png"
+              alt="image"
+              class="workflow__img"
+            />
+            <img
+              src="./assets/images/workflow-img4.png"
+              alt="image"
+              class="workflow__img"
+            />
+            <img
+              src="./assets/images/workflow-img5.png"
+              alt="image"
+              class="workflow__img"
+            />
+          </div>
         </section>
 
         <section class="reviews container">
@@ -1797,149 +1841,144 @@
           />
         </div>
       </section>
+    </main>
 
-      <footer class="footer container">
-        <div class="footer__content">
-          <div class="footer__left">
-            <div class="footer__logo-registr">
-              <p class="footer__logo">PatentRum</p>
-              <a class="footer__registr">Регистрация товарного знака онлайн</a>
+    <footer class="footer container">
+      <div class="footer__content">
+        <div class="footer__left">
+          <div class="footer__logo-registr">
+            <p class="footer__logo">PatentRum</p>
+            <a class="footer__registr">Регистрация товарного знака онлайн</a>
+          </div>
+          <div class="footer__mobile-absolute">
+            <div class="footer__data-consen">
+              <a class="footer__data-consen_link" href="#"
+                >Политика конфиденциальности</a
+              >
+              <a class="footer__data-consen_link" href="#">Оферта</a>
+              <a class="footer__data-consen_link" href="#"
+                >Обработка персональных данных</a
+              >
             </div>
-            <div class="footer__mobile-absolute">
-              <div class="footer__data-consen">
-                <a class="footer__data-consen_link" href="#"
-                  >Политика конфиденциальности</a
-                >
-                <a class="footer__data-consen_link" href="#">Оферта</a>
-                <a class="footer__data-consen_link" href="#"
-                  >Обработка персональных данных</a
-                >
-              </div>
-              <div class="footer__set-cards">
-                <img
-                  class="footer__card"
-                  src="./assets/images/world-card.svg"
-                  alt="world-card"
-                />
-                <img
-                  class="footer__card"
-                  src="./assets/images/visa-card.svg"
-                  alt="visa-card"
-                />
-                <img
-                  class="footer__card"
-                  src="./assets/images/master-card.svg"
-                  alt="world-card"
-                />
-              </div>
+            <div class="footer__set-cards">
+              <img
+                class="footer__card"
+                src="./assets/images/world-card.svg"
+                alt="world-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/visa-card.svg"
+                alt="visa-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/master-card.svg"
+                alt="world-card"
+              />
             </div>
           </div>
+        </div>
 
-          <div class="footer__columns">
-            <div class="footer__column">
-              <p class="footer__column_title">Защитить сейчас</p>
-              <div class="footer__list">
-                <a class="footer__item" href="#">Товарный знак</a>
-                <a class="footer__item" href="#">Программа для ЭВМ</a>
-                <a class="footer__item" href="#">Изобретение</a>
-                <a class="footer__item" href="#">Дизайн изделия</a>
-                <a class="footer__item" href="#">База данных</a>
-                <a class="footer__item" href="#">Полезная модель</a>
-              </div>
-            </div>
-
-            <div class="footer__column">
-              <p class="footer__column_title">Узнать больше</p>
-              <div class="footer__list">
-                <a class="footer__item" href="#">Услуги и цены</a>
-                <a class="footer__item" href="#">О нас</a>
-                <a class="footer__item" href="#">Блог</a>
-                <a class="footer__item" href="#">Контакты</a>
-              </div>
+        <div class="footer__columns">
+          <div class="footer__column">
+            <p class="footer__column_title">Защитить сейчас</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Товарный знак</a>
+              <a class="footer__item" href="#">Программа для ЭВМ</a>
+              <a class="footer__item" href="#">Изобретение</a>
+              <a class="footer__item" href="#">Дизайн изделия</a>
+              <a class="footer__item" href="#">База данных</a>
+              <a class="footer__item" href="#">Полезная модель</a>
             </div>
           </div>
 
           <div class="footer__column">
-            <div class="contact">
-              <img
-                src="./assets/images/icon-phone.svg"
-                class="contact-icon"
-                alt="icon-phone"
-              />
-              <span class="contact-text text-white footer__contact-text"
-                >+7 000 000 0000</span
-              >
+            <p class="footer__column_title">Узнать больше</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Услуги и цены</a>
+              <a class="footer__item" href="#">О нас</a>
+              <a class="footer__item" href="#">Блог</a>
+              <a class="footer__item" href="#">Контакты</a>
             </div>
-
-            <div class="contact">
-              <img
-                src="./assets/images/sms.svg"
-                class="contact-icon"
-                alt="icon-phone"
-              />
-              <span class="contact-text text-white footer__contact-text"
-                >forexample@mail.ru</span
-              >
-            </div>
-
-            <div class="contact">
-              <img
-                src="./assets/images/icon-location.svg"
-                class="contact-icon"
-                alt="icon-phone"
-              />
-              <span class="contact-text text-white footer__contact-text"
-                >г. Москва, Рязанский проспект 75 кор.4 этаж 12
-              </span>
-            </div>
-
-            <div class="footer__social">
-              <a href="#"
-                ><img src="./assets/images/icon-vk.svg" alt="icon-vk"
-              /></a>
-              <a href="#"
-                ><img
-                  src="./assets/images/icon-telegram.svg"
-                  alt="icon-telegram"
-              /></a>
-              <a href="#"
-                ><img src="./assets/images/icon-v.svg" alt="icon-v"
-              /></a>
-            </div>
-            <button
-              class="btn btn-blue btn-primary hide-mobile"
-              data-modal="modal-nl"
-            >
-              Подписаться на рассылку
-            </button>
-          </div>
-          <div class="footer__right">
-            <a class="footer__right_link" href="#">
-              Написать нам в WhatsApp<img
-                class="footer__right_icon"
-                src="./assets/images/icon-whatsapp.svg"
-                alt="icon-whatsapp"
-            /></a>
-            <a class="footer__right_link" href="#">
-              Написать нам в Telegram<img
-                class="footer__right_icon"
-                src="./assets/images/icon-telegram-blue.svg"
-                alt="icon-whatsapp"
-            /></a>
           </div>
         </div>
-      </footer>
-    </main>
+
+        <div class="footer__column">
+          <div class="contact">
+            <img
+              src="./assets/images/icon-phone.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >+7 000 000 0000</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/sms.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >forexample@mail.ru</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/icon-location.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >г. Москва, Рязанский проспект 75 кор.4 этаж 12
+            </span>
+          </div>
+
+          <div class="footer__social">
+            <a href="#"
+              ><img src="./assets/images/icon-vk.svg" alt="icon-vk"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-telegram.svg" alt="icon-telegram"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-v.svg" alt="icon-v"
+            /></a>
+          </div>
+          <button
+            class="btn btn-blue btn-primary hide-mobile"
+            data-modal="modal-nl"
+          >
+            Подписаться на рассылку
+          </button>
+        </div>
+        <div class="footer__right">
+          <a class="footer__right_link" href="#">
+            Написать нам в WhatsApp<img
+              class="footer__right_icon"
+              src="./assets/images/icon-whatsapp.svg"
+              alt="icon-whatsapp"
+          /></a>
+          <a class="footer__right_link" href="#">
+            Написать нам в Telegram<img
+              class="footer__right_icon"
+              src="./assets/images/icon-telegram-blue.svg"
+              alt="icon-whatsapp"
+          /></a>
+        </div>
+      </div>
+    </footer>
     <script src="./js/modal.js" defer></script>
     <script src="./index.js" defer></script>
     <script src="https://unpkg.com/imask" defer></script>
     <script src="./js/validateForm.js" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <script src="./js/slider.js" defer></script>
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      defer
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/marquee.js" defer></script>
     <script src="./js/blog.js" defer></script>
     <script src="./js/workflow.js" defer></script>

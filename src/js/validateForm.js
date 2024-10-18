@@ -5,7 +5,7 @@ $(document).ready(function () {
   $("form").each(function () {
     const form = $(this);
     const formId = form.attr("id");
-    formInteractions[formId] = {}; // Инициализируем объект для отслеживания взаимодействий
+    formInteractions[formId] = {};
 
     const phoneInput = form.find("#phone");
     if (phoneInput.length) {
@@ -30,8 +30,8 @@ $(document).ready(function () {
   }
 
   // Функция показа/скрытия ошибки
-  function toggleError(field, errorMessageId, message = "") {
-    const errorField = $(`#${errorMessageId}`);
+  function toggleError(field, form, errorMessageId, message = "") {
+    const errorField = form.find(`#${errorMessageId}`); // Найти ошибку только в рамках формы
     field.toggleClass("err-form", message !== "");
     message ? errorField.text(message).show() : errorField.hide();
   }
@@ -46,6 +46,28 @@ $(document).ready(function () {
 
   // Валидаторы для каждого поля
   const validators = {
+    login: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+      {
+        test: (val) => val.length >= 4,
+        message: "Логин должен содержать не менее 4 символов",
+      },
+      {
+        test: (val) => val.length <= 12,
+        message: "Логин не должен превышать 12 символов",
+      },
+    ],
+    password: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+      {
+        test: (val) => val.length >= 4,
+        message: "Пароль должен содержать не менее 4 символов",
+      },
+      {
+        test: (val) => val.length <= 12,
+        message: "Пароль не должен превышать 12 символов",
+      },
+    ],
     name: [
       { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
       {
@@ -87,7 +109,7 @@ $(document).ready(function () {
   };
 
   // Общая функция проверки поля
-  function validateAndShowError(field, fieldName, formId, force = false) {
+  function validateAndShowError(field, fieldName, form, formId, force = false) {
     const formInteraction = formInteractions[formId];
     if (formInteraction[fieldName] || force) {
       const fieldValidators =
@@ -95,7 +117,7 @@ $(document).ready(function () {
           ? validators[fieldName](formId)
           : validators[fieldName];
       const errorMessage = validateField(field.val(), fieldValidators);
-      toggleError(field, `${fieldName}-error`, errorMessage);
+      toggleError(field, form, `${fieldName}-error`, errorMessage);
       return !errorMessage;
     }
     return true;
@@ -115,6 +137,7 @@ $(document).ready(function () {
       const fieldIsValid = validateAndShowError(
         field,
         field.attr("id"),
+        form,
         formId,
         force
       );
@@ -151,6 +174,7 @@ $(document).ready(function () {
     if (formInteractions[formId]["dataConsent"] || force) {
       toggleError(
         consentField,
+        form,
         "consent-error",
         consentChecked
           ? ""
@@ -168,7 +192,7 @@ $(document).ready(function () {
 
     if (validators[this.id]) {
       formInteractions[formId][this.id] = true;
-      validateAndShowError($(this), this.id, formId);
+      validateAndShowError($(this), this.id, form, formId);
     }
 
     checkFormValidity(form);
@@ -182,7 +206,7 @@ $(document).ready(function () {
     formInteractions[formId][this.id] = true;
 
     if (validators[this.id]) {
-      validateAndShowError($(this), this.id, formId);
+      validateAndShowError($(this), this.id, form, formId);
     }
 
     checkFormValidity(form);
@@ -193,7 +217,6 @@ $(document).ready(function () {
     const form = $(this).closest("form");
     const formId = form.attr("id");
 
-    // Отмечаем, что пользователь взаимодействовал с чекбоксом
     formInteractions[formId]["dataConsent"] = true;
 
     validateConsent(form);
@@ -231,6 +254,19 @@ $(document).ready(function () {
       }
 
       form.find('button[type="submit"]').addClass("button-inactive");
+    }
+  });
+});
+
+$(document).ready(function () {
+  $("#togglePassword").on("click", function () {
+    let passwordField = $("#password");
+
+    // Если тип поля password, то меняем на текст и наоборот
+    if (passwordField.attr("type") === "password") {
+      passwordField.attr("type", "text");
+    } else {
+      passwordField.attr("type", "password");
     }
   });
 });

@@ -82,6 +82,7 @@
 
 .blog__slide-top .txt20_bold:last-of-type {
   text-align: center;
+  z-index: 2;
   @media (max-width: 48rem) {
     font-size: 4rem;
   }
@@ -91,7 +92,7 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  z-index: -5;
+  z-index: 1;
   height: 100%;
 }
 
@@ -170,9 +171,6 @@
 .blog__slide-icons {
   display: flex;
   justify-content: space-between;
-  @media (max-width: 48rem) {
-    display: none;
-  }
 }
 
 .blog__slide-comment {
@@ -209,5 +207,12 @@
   display: none;
   @media (max-width: 48rem) {
     display: flex;
+  }
+}
+
+.blog__slide-icons .icon-comment {
+  @media (max-width: 48rem) {
+    width: 4.8rem;
+    height: 4.8rem;
   }
 }

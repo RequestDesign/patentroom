@@ -35,8 +35,16 @@
   color: white;
 }
 
-.questions__item-btn .icon-plus,
-.icon-minus {
+.questions__item-btn .icon-minus {
+  width: 4.8rem;
+  height: 4.8rem;
+  @media (max-width: 48rem) {
+    width: 9.6rem;
+    height: 9.6rem;
+  }
+}
+
+.questions__item-btn .icon-plus {
   width: 4.8rem;
   height: 4.8rem;
   @media (max-width: 48rem) {
@@ -78,10 +86,6 @@
 
 .question__item-toggle.active {
   display: flex;
-}
-
-.icon-minus {
-  display: none;
 }
 
 .questions__item-btn.active .icon-minus {

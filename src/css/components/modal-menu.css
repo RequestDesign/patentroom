@@ -124,16 +124,6 @@
 }
 
 @media (min-width: 48rem) {
-  .arrow-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s ease-in-out;
-    transform-origin: center;
-  }
-
   .modal-menu__left-item .txt22_bold {
     z-index: 5;
   }
@@ -144,41 +134,5 @@
 
   .modal-menu__left-item:not(:hover) .arrow-img {
     animation: move-diagonally-reverse 0.3s ease-in-out forwards;
-  }
-
-  @keyframes move-diagonally {
-    0% {
-      transform: translate(0, 0); /* Начальная позиция */
-    }
-    50% {
-      transform: translate(-40%, 40%); /* Стрелка уходит в левый нижний угол */
-    }
-    51% {
-      transform: translate(
-        40%,
-        -40%
-      ); /* Момент выхода из правого верхнего угла */
-    }
-    100% {
-      transform: translate(0, 0); /* Возвращается в начальное положение */
-    }
-  }
-
-  @keyframes move-diagonally-reverse {
-    0% {
-      transform: translate(0, 0); /* Начальная позиция */
-    }
-    50% {
-      transform: translate(
-        40%,
-        -40%
-      ); /* Момент выхода из правого верхнего угла */
-    }
-    51% {
-      transform: translate(-40%, 40%); /* Стрелка уходит в левый нижний угол */
-    }
-    100% {
-      transform: translate(0, 0); /* Возвращается в начальное положение */
-    }
   }
 }

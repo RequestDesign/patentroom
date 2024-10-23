@@ -15,7 +15,7 @@
 @import "./css/components/reviews.css";
 @import "./css/components/form.css";
 @import "./css/styles/text.css";
-@import "./css/components/trademark.css";
+@import "./css/components/tm.css";
 @import "./css/components/modal.css";
 @import "./css/components/modal-calc.css";
 @import "./css/components/modal-menu.css";
@@ -36,3 +36,11 @@
 @import "./css/components/tm-reg.css";
 @import "./css/components/our-benefits.css";
 @import "./css/components/questions.css";
+@import "./css/pages/class-select.css";
+@import "./css/components/goods.css";
+@import "./css/pages/class-dtl.css";
+@import "./css/pages/blog-pg.css";
+@import "./css/pages/contacts.css";
+@import "./css/pages/not-found.css";
+@import "./css/pages/company.css";
+@import "./css/components/basic-srvcs.css";

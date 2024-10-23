@@ -84,12 +84,13 @@
 
 .icon-set {
   width: 5.6rem;
-  height: 100%;
+  height: 5.6rem;
   border-radius: 100px;
   background-color: #4ebdf5;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: -2px;
 
   @media (max-width: 48rem) {
     width: 9.2rem;

@@ -1,0 +1,108 @@
+.basic-srvcs__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+  }
+}
+
+.basic-srvcs__box {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    gap: 3.2rem;
+  }
+}
+
+.basic-srvcs__list {
+  display: flex;
+  gap: 2.8rem;
+  height: 21.5rem;
+  @media (max-width: 48rem) {
+    height: auto;
+    flex-direction: column;
+  }
+}
+
+.basic-srvcs__text {
+  @media (max-width: 48rem) {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    gap: 2.4rem;
+    margin-bottom: 4.8rem;
+  }
+}
+
+.basic-srvcs__list-btm {
+  @media (max-width: 48rem) {
+    height: 58rem;
+    flex-direction: column;
+  }
+}
+
+.basic-srvcs__item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: white;
+  border-radius: 3.2rem;
+  overflow: hidden;
+  padding: 2.8rem 1.6rem 1.6rem 2.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.basic-srvcs__item-img {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease;
+  will-change: filter;
+  filter: blur(22px);
+}
+
+.basic-srvcs__item-btn {
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: #4ebdf5;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin-right: 0px;
+  margin-left: auto;
+  @media (max-width: 48rem) {
+    width: 9.6rem;
+    height: 9.6rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .basic-srvcs__item:hover .basic-srvcs__item-img {
+    transform: translateY(50%);
+  }
+
+  .arrow-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
+  }
+
+  .basic-srvcs__item:hover .arrow-img {
+    animation: move-diagonally 0.3s ease-in-out forwards;
+  }
+
+  .basic-srvcs__item:not(:hover) .arrow-img {
+    animation: move-diagonally-reverse 0.3s ease-in-out forwards;
+  }
+}

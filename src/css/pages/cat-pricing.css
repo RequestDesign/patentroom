@@ -237,10 +237,6 @@
   display: flex;
 }
 
-.icon-minus {
-  display: none;
-}
-
 .cat-pricing__cat-btn.active .icon-minus {
   display: inline;
 }

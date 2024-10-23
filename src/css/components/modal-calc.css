@@ -191,10 +191,20 @@
   width: 100%;
 }
 
-.icon-plus,
-.icon-minus {
+.modal-calc__counter-btn .icon-plus {
   width: 5.6rem;
   height: 5.6rem;
+  margin-right: -2px;
+  @media (max-width: 48rem) {
+    width: 9.6rem;
+    height: 9.6rem;
+  }
+}
+
+.modal-calc__counter-btn .icon-minus {
+  width: 5.6rem;
+  height: 5.6rem;
+  margin-left: -2px;
   @media (max-width: 48rem) {
     width: 9.6rem;
     height: 9.6rem;

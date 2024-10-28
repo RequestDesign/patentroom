@@ -41,6 +41,27 @@
   width: 100%;
 }
 
+.reviews__info {
+  display: flex;
+  gap: 1.6rem;
+  @media (max-width: 48rem) {
+    gap: 1.6rem;
+  }
+}
+
+.reviews__info-img img {
+  width: 14.6rem;
+  height: 18.6rem;
+  border-radius: 1.6rem;
+  @media (max-width: 48rem) {
+    width: 19.6rem;
+    height: 25.2rem;
+  }
+}
+.reviews__info-text {
+  overflow: hidden;
+}
+
 .reviews__text {
   font-size: 1.8rem;
   font-weight: 400;
@@ -48,12 +69,13 @@
   transition: color 0.5s ease;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 7;
   overflow: hidden;
   text-overflow: ellipsis;
 
   @media (max-width: 48rem) {
     font-size: 2.8rem;
+    -webkit-line-clamp: 6;
   }
 }
 

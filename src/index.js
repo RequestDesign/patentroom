@@ -1,20 +1,20 @@
 //team
-$(document).ready(function () {
-  // Обработчик наведения на карточку
-  $(".team__slide").on("mouseenter", function () {
-    // Скрыть информацию в других слайдах
-    $(".team__slide-info").removeClass("active").fadeOut();
+// $(document).ready(function () {
+//   // Обработчик наведения на карточку
+//   $(".team__slide").on("mouseenter", function () {
+//     // Скрыть информацию в других слайдах
+//     $(".team__slide-info").removeClass("active").fadeOut();
 
-    // Показать информацию текущего слайда
-    $(this).find(".team__slide-info").addClass("active").fadeIn();
-  });
+//     // Показать информацию текущего слайда
+//     $(this).find(".team__slide-info").addClass("active").fadeIn();
+//   });
 
-  // Обработчик выхода мыши из карточки
-  $(".team__slide").on("mouseleave", function () {
-    // Скрыть информацию текущего слайда при выходе курсора
-    $(this).find(".team__slide-info").removeClass("active").fadeOut();
-  });
-});
+//   // Обработчик выхода мыши из карточки
+//   $(".team__slide").on("mouseleave", function () {
+//     // Скрыть информацию текущего слайда при выходе курсора
+//     $(this).find(".team__slide-info").removeClass("active").fadeOut();
+//   });
+// });
 
 // $('[data-modal="menu-modal"]').on("click", () => {
 //   $(".modal-bidl").addClass("modal-active");
@@ -113,5 +113,39 @@ $(document).ready(function () {
     $subList.stop(true, true).slideToggle(200);
 
     $thisButton.toggleClass("active");
+  });
+});
+
+// comment
+$(document).ready(function () {
+  $(".all-com__reply").on("click", function () {
+    const nestedBlock = $(this).siblings(".all-com__nested"); // Ищем блок рядом с кнопкой
+
+    if (nestedBlock.length) {
+      nestedBlock.toggleClass("active"); // Переключаем класс active
+
+      // Меняем текст кнопки в зависимости от состояния
+      const isActive = nestedBlock.hasClass("active");
+      $(this)
+        .find("p")
+        .text(isActive ? "Скрыть" : "Показать ещё 2 ответа");
+    } else {
+      console.error("Блок .all-com__nested не найден");
+    }
+  });
+});
+
+// ответить
+
+$(document).ready(function () {
+  $(".reply-button").on("click", function () {
+    // Находим блок new-com, который идет после кнопки
+    const newComBlock = $(this).closest(".all-com__block").find(".new-com");
+
+    // Показываем блок new-com
+    newComBlock.removeClass("hidden");
+
+    // Устанавливаем opacity 0 для скрытия кнопки
+    $(this).css("opacity", "0");
   });
 });

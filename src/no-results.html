@@ -14,7 +14,7 @@
           <div class="header__container">
             <div class="header__block_left">
               <p class="header__logo">PatentRum</p>
-              <a class="header__link" href="#">
+              <a class="header__link" href="./blog-pg.html">
                 <p class="txt20 hide-mobile">Блог</p></a
               >
             </div>
@@ -30,7 +30,9 @@
               </div>
 
               <div class="button-group">
-                <button class="btn btn-primary hide-mobile">Войти</button>
+                <a href="./signin.html" class="btn btn-primary hide-mobile"
+                  >Войти</a
+                >
                 <button class="btn btn-secondary header__btn modal-close-menu">
                   <span class="hide-mobile">меню</span>
                   <div class="icon-set">
@@ -248,8 +250,8 @@
                 />
               </button>
               <h2 class="txt36-days">спасибо за подписку!</h2>
-              <a href="./main.html">
-                <button class="btn btn-blue btn-primary">на главную</button></a
+              <a class="btn btn-blue btn-primary" href="./main.html">
+                на главную</a
               >
             </div>
           </div>
@@ -313,10 +315,7 @@
 
           <div class="header__block_right">
             <div class="button-group">
-              <button
-                class="btn btn-secondary header__btn hide-mobile"
-                data-modal="modal-menu"
-              >
+              <button class="btn btn-secondary header__btn hide-mobile">
                 <span class="hide-mobile">Иван Иванов</span>
                 <div class="icon-set">
                   <img
@@ -327,7 +326,7 @@
                 </div>
               </button>
 
-              <button
+              <a
                 class="btn btn-secondary header__btn hide-desktop"
                 data-modal="modal-menu"
               >
@@ -339,12 +338,13 @@
                     alt="иконка-меню"
                   />
                 </div>
-              </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </header>
+
     <main>
       <section class="no-result">
         <div class="container">
@@ -368,9 +368,9 @@
                 <p class="txt22">
                   Получите доступ к расширенным фильтрам в личном кабинете
                 </p>
-                <button class="btn btn-blue btn-primary" data-modal="modal-nl">
+                <a href="./signup.html" class="btn btn-blue btn-primary">
                   Зарегистрироваться
-                </button>
+                </a>
               </div>
               <div class="no-result__btm-right">
                 <img
@@ -489,10 +489,7 @@
               ><img src="./assets/images/icon-v.svg" alt="icon-v"
             /></a>
           </div>
-          <button
-            class="btn btn-blue btn-primary hide-mobile"
-            data-modal="modal-nl"
-          >
+          <button class="btn btn-blue btn-primary" data-modal="modal-nl">
             Подписаться на рассылку
           </button>
         </div>

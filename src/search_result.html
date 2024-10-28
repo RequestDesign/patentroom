@@ -14,7 +14,7 @@
           <div class="header__container">
             <div class="header__block_left">
               <p class="header__logo">PatentRum</p>
-              <a class="header__link" href="#">
+              <a class="header__link" href="./blog-pg.html">
                 <p class="txt20 hide-mobile">Блог</p></a
               >
             </div>
@@ -30,7 +30,9 @@
               </div>
 
               <div class="button-group">
-                <button class="btn btn-primary hide-mobile">Войти</button>
+                <a href="./signin.html" class="btn btn-primary hide-mobile"
+                  >Войти</a
+                >
                 <button class="btn btn-secondary header__btn modal-close-menu">
                   <span class="hide-mobile">меню</span>
                   <div class="icon-set">
@@ -248,8 +250,8 @@
                 />
               </button>
               <h2 class="txt36-days">спасибо за подписку!</h2>
-              <a href="./main.html">
-                <button class="btn btn-blue btn-primary">на главную</button></a
+              <a class="btn btn-blue btn-primary" href="./main.html">
+                на главную</a
               >
             </div>
           </div>
@@ -419,10 +421,7 @@
 
           <div class="header__block_right">
             <div class="button-group">
-              <button
-                class="btn btn-secondary header__btn hide-mobile"
-                data-modal="modal-menu"
-              >
+              <button class="btn btn-secondary header__btn hide-mobile">
                 <span class="hide-mobile">Иван Иванов</span>
                 <div class="icon-set">
                   <img
@@ -433,7 +432,7 @@
                 </div>
               </button>
 
-              <button
+              <a
                 class="btn btn-secondary header__btn hide-desktop"
                 data-modal="modal-menu"
               >
@@ -445,7 +444,7 @@
                     alt="иконка-меню"
                   />
                 </div>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -480,31 +479,43 @@
                   src="./assets/images/back-search-item.png"
                   alt="background"
                 />
-                <div class="search-result__item-right">
-                  <p class="txt18">Ковер</p>
-                </div>
-                <div class="search-result__item-info">
-                  <div class="search-result__item-number">
-                    <div class="search-result__icon-number">
-                      <p class="txt18-days">тз</p>
+                <div class="search-result__item-top">
+                  <div class="search-result__item-right">
+                    <p class="txt18">Ковер</p>
+                  </div>
+                  <div class="search-result__item-info">
+                    <div class="search-result__item-number">
+                      <div class="search-result__icon-number">
+                        <p class="txt18-days">тз</p>
+                      </div>
+                      <p class="txt18">1234565</p>
                     </div>
-                    <p class="txt18">1234565</p>
+                    <div class="search-result__item-text">
+                      <p class="txt16_bold">Правообладатель</p>
+                      <p class="txt18 search-result__name">
+                        Иванов Иван Иванович
+                      </p>
+                    </div>
+                    <div class="search-result__item-text hide-mobile">
+                      <p class="txt16_bold">Классы</p>
+                      <p class="txt18">1,2</p>
+                    </div>
                   </div>
-                  <div class="search-result__item-text">
-                    <p class="txt16_bold">Правообладатель</p>
-                    <p class="txt18 search-result__name">
-                      Иванов Иван Иванович
-                    </p>
-                  </div>
-                  <div
-                    class="search-result__item-text search-result__item-address"
-                  >
-                    <p class="txt16_bold">Адрес</p>
-                    <p class="txt18 search-result__address">
-                      420021, Республика Татарстан, Казань, а/я, 263, ООО
-                      "БизБренд"
-                    </p>
-                  </div>
+                </div>
+
+                <div class="search-result__item-text hide-desktop">
+                  <p class="txt16_bold">Классы</p>
+                  <p class="txt18">1,2</p>
+                </div>
+
+                <div
+                  class="search-result__item-text search-result__item-address"
+                >
+                  <p class="txt16_bold">Адрес</p>
+                  <p class="txt18 search-result__address">
+                    420021, Республика Татарстан, Казань, а/я, 263, ООО
+                    "БизБренд"
+                  </p>
                 </div>
               </li>
               <li class="search-result__item">
@@ -517,33 +528,46 @@
                   src="./assets/images/back-search-item.png"
                   alt="background"
                 />
-                <div class="search-result__item-right">
-                  <p class="txt18">Ковер</p>
-                </div>
-                <div class="search-result__item-info">
-                  <div class="search-result__item-number">
-                    <div class="search-result__icon-number">
-                      <p class="txt18-days">тз</p>
+                <div class="search-result__item-top">
+                  <div class="search-result__item-right">
+                    <p class="txt18">Ковер</p>
+                  </div>
+                  <div class="search-result__item-info">
+                    <div class="search-result__item-number">
+                      <div class="search-result__icon-number">
+                        <p class="txt18-days">тз</p>
+                      </div>
+                      <p class="txt18">1234565</p>
                     </div>
-                    <p class="txt18">1234565</p>
+                    <div class="search-result__item-text">
+                      <p class="txt16_bold">Правообладатель</p>
+                      <p class="txt18 search-result__name">
+                        Иванов Иван Иванович
+                      </p>
+                    </div>
+                    <div class="search-result__item-text hide-mobile">
+                      <p class="txt16_bold">Классы</p>
+                      <p class="txt18">1,2</p>
+                    </div>
                   </div>
-                  <div class="search-result__item-text">
-                    <p class="txt16_bold">Правообладатель</p>
-                    <p class="txt18 search-result__name">
-                      Иванов Иван Иванович
-                    </p>
-                  </div>
-                  <div
-                    class="search-result__item-text search-result__item-address"
-                  >
-                    <p class="txt16_bold">Адрес</p>
-                    <p class="txt18 search-result__address">
-                      420021, Республика Татарстан, Казань, а/я, 263, ООО
-                      "БизБренд"
-                    </p>
-                  </div>
+                </div>
+
+                <div class="search-result__item-text hide-desktop">
+                  <p class="txt16_bold">Классы</p>
+                  <p class="txt18">1,2</p>
+                </div>
+
+                <div
+                  class="search-result__item-text search-result__item-address"
+                >
+                  <p class="txt16_bold">Адрес</p>
+                  <p class="txt18 search-result__address">
+                    420021, Республика Татарстан, Казань, а/я, 263, ООО
+                    "БизБренд"
+                  </p>
                 </div>
               </li>
+
               <li class="search-result__item">
                 <button
                   class="search-result__item-btn"
@@ -554,33 +578,46 @@
                   src="./assets/images/back-search-item.png"
                   alt="background"
                 />
-                <div class="search-result__item-right">
-                  <p class="txt18">Ковер</p>
-                </div>
-                <div class="search-result__item-info">
-                  <div class="search-result__item-number">
-                    <div class="search-result__icon-number">
-                      <p class="txt18-days">тз</p>
+                <div class="search-result__item-top">
+                  <div class="search-result__item-right">
+                    <p class="txt18">Ковер</p>
+                  </div>
+                  <div class="search-result__item-info">
+                    <div class="search-result__item-number">
+                      <div class="search-result__icon-number">
+                        <p class="txt18-days">тз</p>
+                      </div>
+                      <p class="txt18">1234565</p>
                     </div>
-                    <p class="txt18">1234565</p>
+                    <div class="search-result__item-text">
+                      <p class="txt16_bold">Правообладатель</p>
+                      <p class="txt18 search-result__name">
+                        Иванов Иван Иванович
+                      </p>
+                    </div>
+                    <div class="search-result__item-text hide-mobile">
+                      <p class="txt16_bold">Классы</p>
+                      <p class="txt18">1,2</p>
+                    </div>
                   </div>
-                  <div class="search-result__item-text">
-                    <p class="txt16_bold">Правообладатель</p>
-                    <p class="txt18 search-result__name">
-                      Иванов Иван Иванович
-                    </p>
-                  </div>
-                  <div
-                    class="search-result__item-text search-result__item-address"
-                  >
-                    <p class="txt16_bold">Адрес</p>
-                    <p class="txt18 search-result__address">
-                      420021, Республика Татарстан, Казань, а/я, 263, ООО
-                      "БизБренд"
-                    </p>
-                  </div>
+                </div>
+
+                <div class="search-result__item-text hide-desktop">
+                  <p class="txt16_bold">Классы</p>
+                  <p class="txt18">1,2</p>
+                </div>
+
+                <div
+                  class="search-result__item-text search-result__item-address"
+                >
+                  <p class="txt16_bold">Адрес</p>
+                  <p class="txt18 search-result__address">
+                    420021, Республика Татарстан, Казань, а/я, 263, ООО
+                    "БизБренд"
+                  </p>
                 </div>
               </li>
+
               <li class="search-result__item">
                 <button
                   class="search-result__item-btn"
@@ -591,33 +628,46 @@
                   src="./assets/images/back-search-item.png"
                   alt="background"
                 />
-                <div class="search-result__item-right">
-                  <p class="txt18">Ковер</p>
-                </div>
-                <div class="search-result__item-info">
-                  <div class="search-result__item-number">
-                    <div class="search-result__icon-number">
-                      <p class="txt18-days">тз</p>
+                <div class="search-result__item-top">
+                  <div class="search-result__item-right">
+                    <p class="txt18">Ковер</p>
+                  </div>
+                  <div class="search-result__item-info">
+                    <div class="search-result__item-number">
+                      <div class="search-result__icon-number">
+                        <p class="txt18-days">тз</p>
+                      </div>
+                      <p class="txt18">1234565</p>
                     </div>
-                    <p class="txt18">1234565</p>
+                    <div class="search-result__item-text">
+                      <p class="txt16_bold">Правообладатель</p>
+                      <p class="txt18 search-result__name">
+                        Иванов Иван Иванович
+                      </p>
+                    </div>
+                    <div class="search-result__item-text hide-mobile">
+                      <p class="txt16_bold">Классы</p>
+                      <p class="txt18">1,2</p>
+                    </div>
                   </div>
-                  <div class="search-result__item-text">
-                    <p class="txt16_bold">Правообладатель</p>
-                    <p class="txt18 search-result__name">
-                      Иванов Иван Иванович
-                    </p>
-                  </div>
-                  <div
-                    class="search-result__item-text search-result__item-address"
-                  >
-                    <p class="txt16_bold">Адрес</p>
-                    <p class="txt18 search-result__address">
-                      420021, Республика Татарстан, Казань, а/я, 263, ООО
-                      "БизБренд"
-                    </p>
-                  </div>
+                </div>
+
+                <div class="search-result__item-text hide-desktop">
+                  <p class="txt16_bold">Классы</p>
+                  <p class="txt18">1,2</p>
+                </div>
+
+                <div
+                  class="search-result__item-text search-result__item-address"
+                >
+                  <p class="txt16_bold">Адрес</p>
+                  <p class="txt18 search-result__address">
+                    420021, Республика Татарстан, Казань, а/я, 263, ООО
+                    "БизБренд"
+                  </p>
                 </div>
               </li>
+
               <li class="search-result__item">
                 <button
                   class="search-result__item-btn"
@@ -628,33 +678,46 @@
                   src="./assets/images/back-search-item.png"
                   alt="background"
                 />
-                <div class="search-result__item-right">
-                  <p class="txt18">Ковер</p>
-                </div>
-                <div class="search-result__item-info">
-                  <div class="search-result__item-number">
-                    <div class="search-result__icon-number">
-                      <p class="txt18-days">тз</p>
+                <div class="search-result__item-top">
+                  <div class="search-result__item-right">
+                    <p class="txt18">Ковер</p>
+                  </div>
+                  <div class="search-result__item-info">
+                    <div class="search-result__item-number">
+                      <div class="search-result__icon-number">
+                        <p class="txt18-days">тз</p>
+                      </div>
+                      <p class="txt18">1234565</p>
                     </div>
-                    <p class="txt18">1234565</p>
+                    <div class="search-result__item-text">
+                      <p class="txt16_bold">Правообладатель</p>
+                      <p class="txt18 search-result__name">
+                        Иванов Иван Иванович
+                      </p>
+                    </div>
+                    <div class="search-result__item-text hide-mobile">
+                      <p class="txt16_bold">Классы</p>
+                      <p class="txt18">1,2</p>
+                    </div>
                   </div>
-                  <div class="search-result__item-text">
-                    <p class="txt16_bold">Правообладатель</p>
-                    <p class="txt18 search-result__name">
-                      Иванов Иван Иванович
-                    </p>
-                  </div>
-                  <div
-                    class="search-result__item-text search-result__item-address"
-                  >
-                    <p class="txt16_bold">Адрес</p>
-                    <p class="txt18 search-result__address">
-                      420021, Республика Татарстан, Казань, а/я, 263, ООО
-                      "БизБренд"
-                    </p>
-                  </div>
+                </div>
+
+                <div class="search-result__item-text hide-desktop">
+                  <p class="txt16_bold">Классы</p>
+                  <p class="txt18">1,2</p>
+                </div>
+
+                <div
+                  class="search-result__item-text search-result__item-address"
+                >
+                  <p class="txt16_bold">Адрес</p>
+                  <p class="txt18 search-result__address">
+                    420021, Республика Татарстан, Казань, а/я, 263, ООО
+                    "БизБренд"
+                  </p>
                 </div>
               </li>
+
               <li class="search-result__item">
                 <button
                   class="search-result__item-btn"
@@ -665,33 +728,46 @@
                   src="./assets/images/back-search-item.png"
                   alt="background"
                 />
-                <div class="search-result__item-right">
-                  <p class="txt18">Ковер</p>
-                </div>
-                <div class="search-result__item-info">
-                  <div class="search-result__item-number">
-                    <div class="search-result__icon-number">
-                      <p class="txt18-days">тз</p>
+                <div class="search-result__item-top">
+                  <div class="search-result__item-right">
+                    <p class="txt18">Ковер</p>
+                  </div>
+                  <div class="search-result__item-info">
+                    <div class="search-result__item-number">
+                      <div class="search-result__icon-number">
+                        <p class="txt18-days">тз</p>
+                      </div>
+                      <p class="txt18">1234565</p>
                     </div>
-                    <p class="txt18">1234565</p>
+                    <div class="search-result__item-text">
+                      <p class="txt16_bold">Правообладатель</p>
+                      <p class="txt18 search-result__name">
+                        Иванов Иван Иванович
+                      </p>
+                    </div>
+                    <div class="search-result__item-text hide-mobile">
+                      <p class="txt16_bold">Классы</p>
+                      <p class="txt18">1,2</p>
+                    </div>
                   </div>
-                  <div class="search-result__item-text">
-                    <p class="txt16_bold">Правообладатель</p>
-                    <p class="txt18 search-result__name">
-                      Иванов Иван Иванович
-                    </p>
-                  </div>
-                  <div
-                    class="search-result__item-text search-result__item-address"
-                  >
-                    <p class="txt16_bold">Адрес</p>
-                    <p class="txt18 search-result__address">
-                      420021, Республика Татарстан, Казань, а/я, 263, ООО
-                      "БизБренд"
-                    </p>
-                  </div>
+                </div>
+
+                <div class="search-result__item-text hide-desktop">
+                  <p class="txt16_bold">Классы</p>
+                  <p class="txt18">1,2</p>
+                </div>
+
+                <div
+                  class="search-result__item-text search-result__item-address"
+                >
+                  <p class="txt16_bold">Адрес</p>
+                  <p class="txt18 search-result__address">
+                    420021, Республика Татарстан, Казань, а/я, 263, ООО
+                    "БизБренд"
+                  </p>
                 </div>
               </li>
+
               <li class="search-result__item">
                 <button
                   class="search-result__item-btn"
@@ -702,33 +778,46 @@
                   src="./assets/images/back-search-item.png"
                   alt="background"
                 />
-                <div class="search-result__item-right">
-                  <p class="txt18">Ковер</p>
-                </div>
-                <div class="search-result__item-info">
-                  <div class="search-result__item-number">
-                    <div class="search-result__icon-number">
-                      <p class="txt18-days">тз</p>
+                <div class="search-result__item-top">
+                  <div class="search-result__item-right">
+                    <p class="txt18">Ковер</p>
+                  </div>
+                  <div class="search-result__item-info">
+                    <div class="search-result__item-number">
+                      <div class="search-result__icon-number">
+                        <p class="txt18-days">тз</p>
+                      </div>
+                      <p class="txt18">1234565</p>
                     </div>
-                    <p class="txt18">1234565</p>
+                    <div class="search-result__item-text">
+                      <p class="txt16_bold">Правообладатель</p>
+                      <p class="txt18 search-result__name">
+                        Иванов Иван Иванович
+                      </p>
+                    </div>
+                    <div class="search-result__item-text hide-mobile">
+                      <p class="txt16_bold">Классы</p>
+                      <p class="txt18">1,2</p>
+                    </div>
                   </div>
-                  <div class="search-result__item-text">
-                    <p class="txt16_bold">Правообладатель</p>
-                    <p class="txt18 search-result__name">
-                      Иванов Иван Иванович
-                    </p>
-                  </div>
-                  <div
-                    class="search-result__item-text search-result__item-address"
-                  >
-                    <p class="txt16_bold">Адрес</p>
-                    <p class="txt18 search-result__address">
-                      420021, Республика Татарстан, Казань, а/я, 263, ООО
-                      "БизБренд"
-                    </p>
-                  </div>
+                </div>
+
+                <div class="search-result__item-text hide-desktop">
+                  <p class="txt16_bold">Классы</p>
+                  <p class="txt18">1,2</p>
+                </div>
+
+                <div
+                  class="search-result__item-text search-result__item-address"
+                >
+                  <p class="txt16_bold">Адрес</p>
+                  <p class="txt18 search-result__address">
+                    420021, Республика Татарстан, Казань, а/я, 263, ООО
+                    "БизБренд"
+                  </p>
                 </div>
               </li>
+
               <li class="search-result__item">
                 <button
                   class="search-result__item-btn"
@@ -739,33 +828,46 @@
                   src="./assets/images/back-search-item.png"
                   alt="background"
                 />
-                <div class="search-result__item-right">
-                  <p class="txt18">Ковер</p>
-                </div>
-                <div class="search-result__item-info">
-                  <div class="search-result__item-number">
-                    <div class="search-result__icon-number">
-                      <p class="txt18-days">тз</p>
+                <div class="search-result__item-top">
+                  <div class="search-result__item-right">
+                    <p class="txt18">Ковер</p>
+                  </div>
+                  <div class="search-result__item-info">
+                    <div class="search-result__item-number">
+                      <div class="search-result__icon-number">
+                        <p class="txt18-days">тз</p>
+                      </div>
+                      <p class="txt18">1234565</p>
                     </div>
-                    <p class="txt18">1234565</p>
+                    <div class="search-result__item-text">
+                      <p class="txt16_bold">Правообладатель</p>
+                      <p class="txt18 search-result__name">
+                        Иванов Иван Иванович
+                      </p>
+                    </div>
+                    <div class="search-result__item-text hide-mobile">
+                      <p class="txt16_bold">Классы</p>
+                      <p class="txt18">1,2</p>
+                    </div>
                   </div>
-                  <div class="search-result__item-text">
-                    <p class="txt16_bold">Правообладатель</p>
-                    <p class="txt18 search-result__name">
-                      Иванов Иван Иванович
-                    </p>
-                  </div>
-                  <div
-                    class="search-result__item-text search-result__item-address"
-                  >
-                    <p class="txt16_bold">Адрес</p>
-                    <p class="txt18 search-result__address">
-                      420021, Республика Татарстан, Казань, а/я, 263, ООО
-                      "БизБренд"
-                    </p>
-                  </div>
+                </div>
+
+                <div class="search-result__item-text hide-desktop">
+                  <p class="txt16_bold">Классы</p>
+                  <p class="txt18">1,2</p>
+                </div>
+
+                <div
+                  class="search-result__item-text search-result__item-address"
+                >
+                  <p class="txt16_bold">Адрес</p>
+                  <p class="txt18 search-result__address">
+                    420021, Республика Татарстан, Казань, а/я, 263, ООО
+                    "БизБренд"
+                  </p>
                 </div>
               </li>
+
               <li class="search-result__item hide-mobile">
                 <button
                   class="search-result__item-btn"
@@ -776,33 +878,46 @@
                   src="./assets/images/back-search-item.png"
                   alt="background"
                 />
-                <div class="search-result__item-right">
-                  <p class="txt18">Ковер</p>
-                </div>
-                <div class="search-result__item-info">
-                  <div class="search-result__item-number">
-                    <div class="search-result__icon-number">
-                      <p class="txt18-days">тз</p>
+                <div class="search-result__item-top">
+                  <div class="search-result__item-right">
+                    <p class="txt18">Ковер</p>
+                  </div>
+                  <div class="search-result__item-info">
+                    <div class="search-result__item-number">
+                      <div class="search-result__icon-number">
+                        <p class="txt18-days">тз</p>
+                      </div>
+                      <p class="txt18">1234565</p>
                     </div>
-                    <p class="txt18">1234565</p>
+                    <div class="search-result__item-text">
+                      <p class="txt16_bold">Правообладатель</p>
+                      <p class="txt18 search-result__name">
+                        Иванов Иван Иванович
+                      </p>
+                    </div>
+                    <div class="search-result__item-text hide-mobile">
+                      <p class="txt16_bold">Классы</p>
+                      <p class="txt18">1,2</p>
+                    </div>
                   </div>
-                  <div class="search-result__item-text">
-                    <p class="txt16_bold">Правообладатель</p>
-                    <p class="txt18 search-result__name">
-                      Иванов Иван Иванович
-                    </p>
-                  </div>
-                  <div
-                    class="search-result__item-text search-result__item-address"
-                  >
-                    <p class="txt16_bold">Адрес</p>
-                    <p class="txt18 search-result__address">
-                      420021, Республика Татарстан, Казань, а/я, 263, ООО
-                      "БизБренд"
-                    </p>
-                  </div>
+                </div>
+
+                <div class="search-result__item-text hide-desktop">
+                  <p class="txt16_bold">Классы</p>
+                  <p class="txt18">1,2</p>
+                </div>
+
+                <div
+                  class="search-result__item-text search-result__item-address"
+                >
+                  <p class="txt16_bold">Адрес</p>
+                  <p class="txt18 search-result__address">
+                    420021, Республика Татарстан, Казань, а/я, 263, ООО
+                    "БизБренд"
+                  </p>
                 </div>
               </li>
+
               <li class="search-result__item hide-mobile">
                 <button
                   class="search-result__item-btn"
@@ -813,33 +928,46 @@
                   src="./assets/images/back-search-item.png"
                   alt="background"
                 />
-                <div class="search-result__item-right">
-                  <p class="txt18">Ковер</p>
-                </div>
-                <div class="search-result__item-info">
-                  <div class="search-result__item-number">
-                    <div class="search-result__icon-number">
-                      <p class="txt18-days">тз</p>
+                <div class="search-result__item-top">
+                  <div class="search-result__item-right">
+                    <p class="txt18">Ковер</p>
+                  </div>
+                  <div class="search-result__item-info">
+                    <div class="search-result__item-number">
+                      <div class="search-result__icon-number">
+                        <p class="txt18-days">тз</p>
+                      </div>
+                      <p class="txt18">1234565</p>
                     </div>
-                    <p class="txt18">1234565</p>
+                    <div class="search-result__item-text">
+                      <p class="txt16_bold">Правообладатель</p>
+                      <p class="txt18 search-result__name">
+                        Иванов Иван Иванович
+                      </p>
+                    </div>
+                    <div class="search-result__item-text hide-mobile">
+                      <p class="txt16_bold">Классы</p>
+                      <p class="txt18">1,2</p>
+                    </div>
                   </div>
-                  <div class="search-result__item-text">
-                    <p class="txt16_bold">Правообладатель</p>
-                    <p class="txt18 search-result__name">
-                      Иванов Иван Иванович
-                    </p>
-                  </div>
-                  <div
-                    class="search-result__item-text search-result__item-address"
-                  >
-                    <p class="txt16_bold">Адрес</p>
-                    <p class="txt18 search-result__address">
-                      420021, Республика Татарстан, Казань, а/я, 263, ООО
-                      "БизБренд"
-                    </p>
-                  </div>
+                </div>
+
+                <div class="search-result__item-text hide-desktop">
+                  <p class="txt16_bold">Классы</p>
+                  <p class="txt18">1,2</p>
+                </div>
+
+                <div
+                  class="search-result__item-text search-result__item-address"
+                >
+                  <p class="txt16_bold">Адрес</p>
+                  <p class="txt18 search-result__address">
+                    420021, Республика Татарстан, Казань, а/я, 263, ООО
+                    "БизБренд"
+                  </p>
                 </div>
               </li>
+
               <li class="search-result__item hide-mobile">
                 <button
                   class="search-result__item-btn"
@@ -850,33 +978,46 @@
                   src="./assets/images/back-search-item.png"
                   alt="background"
                 />
-                <div class="search-result__item-right">
-                  <p class="txt18">Ковер</p>
-                </div>
-                <div class="search-result__item-info">
-                  <div class="search-result__item-number">
-                    <div class="search-result__icon-number">
-                      <p class="txt18-days">тз</p>
+                <div class="search-result__item-top">
+                  <div class="search-result__item-right">
+                    <p class="txt18">Ковер</p>
+                  </div>
+                  <div class="search-result__item-info">
+                    <div class="search-result__item-number">
+                      <div class="search-result__icon-number">
+                        <p class="txt18-days">тз</p>
+                      </div>
+                      <p class="txt18">1234565</p>
                     </div>
-                    <p class="txt18">1234565</p>
+                    <div class="search-result__item-text">
+                      <p class="txt16_bold">Правообладатель</p>
+                      <p class="txt18 search-result__name">
+                        Иванов Иван Иванович
+                      </p>
+                    </div>
+                    <div class="search-result__item-text hide-mobile">
+                      <p class="txt16_bold">Классы</p>
+                      <p class="txt18">1,2</p>
+                    </div>
                   </div>
-                  <div class="search-result__item-text">
-                    <p class="txt16_bold">Правообладатель</p>
-                    <p class="txt18 search-result__name">
-                      Иванов Иван Иванович
-                    </p>
-                  </div>
-                  <div
-                    class="search-result__item-text search-result__item-address"
-                  >
-                    <p class="txt16_bold">Адрес</p>
-                    <p class="txt18 search-result__address">
-                      420021, Республика Татарстан, Казань, а/я, 263, ООО
-                      "БизБренд"
-                    </p>
-                  </div>
+                </div>
+
+                <div class="search-result__item-text hide-desktop">
+                  <p class="txt16_bold">Классы</p>
+                  <p class="txt18">1,2</p>
+                </div>
+
+                <div
+                  class="search-result__item-text search-result__item-address"
+                >
+                  <p class="txt16_bold">Адрес</p>
+                  <p class="txt18 search-result__address">
+                    420021, Республика Татарстан, Казань, а/я, 263, ООО
+                    "БизБренд"
+                  </p>
                 </div>
               </li>
+
               <li class="search-result__item hide-mobile">
                 <button
                   class="search-result__item-btn"
@@ -887,33 +1028,46 @@
                   src="./assets/images/back-search-item.png"
                   alt="background"
                 />
-                <div class="search-result__item-right">
-                  <p class="txt18">Ковер</p>
-                </div>
-                <div class="search-result__item-info">
-                  <div class="search-result__item-number">
-                    <div class="search-result__icon-number">
-                      <p class="txt18-days">тз</p>
+                <div class="search-result__item-top">
+                  <div class="search-result__item-right">
+                    <p class="txt18">Ковер</p>
+                  </div>
+                  <div class="search-result__item-info">
+                    <div class="search-result__item-number">
+                      <div class="search-result__icon-number">
+                        <p class="txt18-days">тз</p>
+                      </div>
+                      <p class="txt18">1234565</p>
                     </div>
-                    <p class="txt18">1234565</p>
+                    <div class="search-result__item-text">
+                      <p class="txt16_bold">Правообладатель</p>
+                      <p class="txt18 search-result__name">
+                        Иванов Иван Иванович
+                      </p>
+                    </div>
+                    <div class="search-result__item-text hide-mobile">
+                      <p class="txt16_bold">Классы</p>
+                      <p class="txt18">1,2</p>
+                    </div>
                   </div>
-                  <div class="search-result__item-text">
-                    <p class="txt16_bold">Правообладатель</p>
-                    <p class="txt18 search-result__name">
-                      Иванов Иван Иванович
-                    </p>
-                  </div>
-                  <div
-                    class="search-result__item-text search-result__item-address"
-                  >
-                    <p class="txt16_bold">Адрес</p>
-                    <p class="txt18 search-result__address">
-                      420021, Республика Татарстан, Казань, а/я, 263, ООО
-                      "БизБренд"
-                    </p>
-                  </div>
+                </div>
+
+                <div class="search-result__item-text hide-desktop">
+                  <p class="txt16_bold">Классы</p>
+                  <p class="txt18">1,2</p>
+                </div>
+
+                <div
+                  class="search-result__item-text search-result__item-address"
+                >
+                  <p class="txt16_bold">Адрес</p>
+                  <p class="txt18 search-result__address">
+                    420021, Республика Татарстан, Казань, а/я, 263, ООО
+                    "БизБренд"
+                  </p>
                 </div>
               </li>
+
               <li class="search-result__item hide-mobile">
                 <button
                   class="search-result__item-btn"
@@ -924,33 +1078,46 @@
                   src="./assets/images/back-search-item.png"
                   alt="background"
                 />
-                <div class="search-result__item-right">
-                  <p class="txt18">Ковер</p>
-                </div>
-                <div class="search-result__item-info">
-                  <div class="search-result__item-number">
-                    <div class="search-result__icon-number">
-                      <p class="txt18-days">тз</p>
+                <div class="search-result__item-top">
+                  <div class="search-result__item-right">
+                    <p class="txt18">Ковер</p>
+                  </div>
+                  <div class="search-result__item-info">
+                    <div class="search-result__item-number">
+                      <div class="search-result__icon-number">
+                        <p class="txt18-days">тз</p>
+                      </div>
+                      <p class="txt18">1234565</p>
                     </div>
-                    <p class="txt18">1234565</p>
+                    <div class="search-result__item-text">
+                      <p class="txt16_bold">Правообладатель</p>
+                      <p class="txt18 search-result__name">
+                        Иванов Иван Иванович
+                      </p>
+                    </div>
+                    <div class="search-result__item-text hide-mobile">
+                      <p class="txt16_bold">Классы</p>
+                      <p class="txt18">1,2</p>
+                    </div>
                   </div>
-                  <div class="search-result__item-text">
-                    <p class="txt16_bold">Правообладатель</p>
-                    <p class="txt18 search-result__name">
-                      Иванов Иван Иванович
-                    </p>
-                  </div>
-                  <div
-                    class="search-result__item-text search-result__item-address"
-                  >
-                    <p class="txt16_bold">Адрес</p>
-                    <p class="txt18 search-result__address">
-                      420021, Республика Татарстан, Казань, а/я, 263, ООО
-                      "БизБренд"
-                    </p>
-                  </div>
+                </div>
+
+                <div class="search-result__item-text hide-desktop">
+                  <p class="txt16_bold">Классы</p>
+                  <p class="txt18">1,2</p>
+                </div>
+
+                <div
+                  class="search-result__item-text search-result__item-address"
+                >
+                  <p class="txt16_bold">Адрес</p>
+                  <p class="txt18 search-result__address">
+                    420021, Республика Татарстан, Казань, а/я, 263, ООО
+                    "БизБренд"
+                  </p>
                 </div>
               </li>
+
               <li class="search-result__item hide-mobile">
                 <button
                   class="search-result__item-btn"
@@ -961,33 +1128,46 @@
                   src="./assets/images/back-search-item.png"
                   alt="background"
                 />
-                <div class="search-result__item-right">
-                  <p class="txt18">Ковер</p>
-                </div>
-                <div class="search-result__item-info">
-                  <div class="search-result__item-number">
-                    <div class="search-result__icon-number">
-                      <p class="txt18-days">тз</p>
+                <div class="search-result__item-top">
+                  <div class="search-result__item-right">
+                    <p class="txt18">Ковер</p>
+                  </div>
+                  <div class="search-result__item-info">
+                    <div class="search-result__item-number">
+                      <div class="search-result__icon-number">
+                        <p class="txt18-days">тз</p>
+                      </div>
+                      <p class="txt18">1234565</p>
                     </div>
-                    <p class="txt18">1234565</p>
+                    <div class="search-result__item-text">
+                      <p class="txt16_bold">Правообладатель</p>
+                      <p class="txt18 search-result__name">
+                        Иванов Иван Иванович
+                      </p>
+                    </div>
+                    <div class="search-result__item-text hide-mobile">
+                      <p class="txt16_bold">Классы</p>
+                      <p class="txt18">1,2</p>
+                    </div>
                   </div>
-                  <div class="search-result__item-text">
-                    <p class="txt16_bold">Правообладатель</p>
-                    <p class="txt18 search-result__name">
-                      Иванов Иван Иванович
-                    </p>
-                  </div>
-                  <div
-                    class="search-result__item-text search-result__item-address"
-                  >
-                    <p class="txt16_bold">Адрес</p>
-                    <p class="txt18 search-result__address">
-                      420021, Республика Татарстан, Казань, а/я, 263, ООО
-                      "БизБренд"
-                    </p>
-                  </div>
+                </div>
+
+                <div class="search-result__item-text hide-desktop">
+                  <p class="txt16_bold">Классы</p>
+                  <p class="txt18">1,2</p>
+                </div>
+
+                <div
+                  class="search-result__item-text search-result__item-address"
+                >
+                  <p class="txt16_bold">Адрес</p>
+                  <p class="txt18 search-result__address">
+                    420021, Республика Татарстан, Казань, а/я, 263, ООО
+                    "БизБренд"
+                  </p>
                 </div>
               </li>
+
               <li class="search-result__item hide-mobile">
                 <button
                   class="search-result__item-btn"
@@ -998,31 +1178,43 @@
                   src="./assets/images/back-search-item.png"
                   alt="background"
                 />
-                <div class="search-result__item-right">
-                  <p class="txt18">Ковер</p>
-                </div>
-                <div class="search-result__item-info">
-                  <div class="search-result__item-number">
-                    <div class="search-result__icon-number">
-                      <p class="txt18-days">тз</p>
+                <div class="search-result__item-top">
+                  <div class="search-result__item-right">
+                    <p class="txt18">Ковер</p>
+                  </div>
+                  <div class="search-result__item-info">
+                    <div class="search-result__item-number">
+                      <div class="search-result__icon-number">
+                        <p class="txt18-days">тз</p>
+                      </div>
+                      <p class="txt18">1234565</p>
                     </div>
-                    <p class="txt18">1234565</p>
+                    <div class="search-result__item-text">
+                      <p class="txt16_bold">Правообладатель</p>
+                      <p class="txt18 search-result__name">
+                        Иванов Иван Иванович
+                      </p>
+                    </div>
+                    <div class="search-result__item-text hide-mobile">
+                      <p class="txt16_bold">Классы</p>
+                      <p class="txt18">1,2</p>
+                    </div>
                   </div>
-                  <div class="search-result__item-text">
-                    <p class="txt16_bold">Правообладатель</p>
-                    <p class="txt18 search-result__name">
-                      Иванов Иван Иванович
-                    </p>
-                  </div>
-                  <div
-                    class="search-result__item-text search-result__item-address"
-                  >
-                    <p class="txt16_bold">Адрес</p>
-                    <p class="txt18 search-result__address">
-                      420021, Республика Татарстан, Казань, а/я, 263, ООО
-                      "БизБренд"
-                    </p>
-                  </div>
+                </div>
+
+                <div class="search-result__item-text hide-desktop">
+                  <p class="txt16_bold">Классы</p>
+                  <p class="txt18">1,2</p>
+                </div>
+
+                <div
+                  class="search-result__item-text search-result__item-address"
+                >
+                  <p class="txt16_bold">Адрес</p>
+                  <p class="txt18 search-result__address">
+                    420021, Республика Татарстан, Казань, а/я, 263, ООО
+                    "БизБренд"
+                  </p>
                 </div>
               </li>
             </ul>
@@ -1033,7 +1225,10 @@
             Зарегистрируйтесь, чтобы увидеть<br />
             больше результатов
           </h2>
-          <button class="btn btn-blue btn-primary">Зрегистрироваться</button>
+
+          <a class="btn btn-blue btn-primary" href="./signup.html"
+            >Зрегистрироваться</a
+          >
         </div>
       </section>
     </main>

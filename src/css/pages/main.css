@@ -2,6 +2,13 @@
   width: 100%;
 }
 
+.background-main {
+  background-image: url("../../assets/images/background-main.png");
+  @media (max-width: 48rem) {
+    background-image: url("../../assets/images/back-main-mob.png");
+  }
+}
+
 /* main */
 .main-tm-left {
   gap: 6.8rem;

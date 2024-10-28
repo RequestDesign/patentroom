@@ -9,7 +9,6 @@
 .blog__top {
   @media (max-width: 48rem) {
     flex-direction: column;
-    gap: 6.4rem;
   }
 }
 

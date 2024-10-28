@@ -60,7 +60,7 @@
 .tm-input {
   width: 100%;
   color: #15161a;
-  font-family: "Gilroy";
+  font-family: "Gilory";
   font-size: 1.8rem;
   font-weight: 400;
   @media (max-width: 48rem) {
@@ -83,6 +83,10 @@
     position: absolute;
     width: calc(100% - 2.8rem);
   }
+}
+
+.tm-list::-webkit-scrollbar {
+  display: none; /* Скрыть скроллбар */
 }
 
 .tm-right {

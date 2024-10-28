@@ -83,7 +83,7 @@
   }
 }
 .txt18-gilory {
-  font-family: "Gilroy";
+  font-family: "Gilory";
   font-size: 1.8rem;
   font-weight: 400;
   @media (max-width: 48rem) {
@@ -137,5 +137,15 @@
   text-transform: uppercase;
   @media (max-width: 48rem) {
     font-size: 4.4rem;
+  }
+}
+
+.txt16-days {
+  font-family: "Days One";
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  @media (max-width: 48rem) {
+    font-size: 2.4rem;
   }
 }

@@ -43,4 +43,7 @@
 @import "./css/pages/contacts.css";
 @import "./css/pages/not-found.css";
 @import "./css/pages/company.css";
-@import "./css/components/basic-srvcs.css";
+@import "./css/pages/blog-dtl.css";
+@import "./css/components/article.css";
+@import "./css/components/new-comment.css";
+@import "./css/components/all-com.css";

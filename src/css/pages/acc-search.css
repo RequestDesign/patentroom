@@ -1,0 +1,234 @@
+.acc-search {
+  margin-top: 4rem;
+  @media (max-width: 48rem) {
+    margin-top: 0rem;
+  }
+}
+
+.acc-search-no-result__txt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.acc-search-no-result__txt .txt36-days {
+  color: white;
+  max-width: 70rem;
+  text-align: center;
+}
+
+.acc-search__block-search {
+  display: flex;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    gap: 1.6rem;
+  }
+}
+
+.acc-search .search-result__block-search {
+  max-width: 142.1rem;
+  @media (max-width: 48rem) {
+    max-width: 59rem;
+  }
+}
+
+.acc-search .btn {
+  @media (max-width: 48rem) {
+    padding: 0rem;
+  }
+}
+
+.acc-search-cat {
+  position: relative;
+}
+
+.acc-search-cat__block {
+  @media (max-width: 48rem) {
+    height: 9.8rem;
+  }
+}
+
+.acc-search-cat__list {
+  display: flex;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    position: absolute;
+    scrollbar-width: none;
+    height: 9.8rem;
+    width: calc(100% - 2.8rem);
+    gap: 3.2rem;
+    overflow: auto;
+  }
+}
+
+.acc-search-cat__item {
+  height: 5.7rem;
+  padding: 0rem 2.8rem;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  @media (max-width: 48rem) {
+    padding: 0rem 4.8rem;
+    height: 9.8rem;
+    flex: 0 0 max-content;
+  }
+}
+
+.acc-search-cat__item .txt22_bold {
+  color: white;
+}
+
+.acc-search-cat__item.active {
+  background-color: white;
+}
+
+.acc-search-cat__item.active .txt22_bold {
+  color: #15161a;
+}
+
+.hidden {
+  display: none;
+}
+
+.acc-search__filter {
+  margin-top: 2.2rem;
+  margin-bottom: 20rem;
+}
+
+.acc-search__filter-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+.acc-search__filter-group {
+  display: flex;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+  }
+}
+
+.filter-label {
+  height: 5.6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0rem 2.8rem;
+  background-color: white;
+  border-radius: 100px;
+  border: 2px solid #4ebdf5;
+}
+
+.filter-input {
+  color: #15161a;
+  font-family: Gilroy;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.filter-input::placeholder {
+  color: rgba(21, 22, 26, 0.6);
+}
+
+.filter-country {
+  max-width: 35.6rem;
+  padding-right: 1.6rem;
+}
+
+.country-select-container {
+  position: relative;
+  max-width: 35.6rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1.6rem;
+  z-index: 1;
+}
+
+.arrow-country {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.arrow-country-up {
+  display: none;
+}
+
+.country-select-container.open .arrow-country-down {
+  display: none;
+}
+
+.country-select-container.open .arrow-country-up {
+  display: inline;
+}
+
+.country-search-input {
+  width: max-content;
+  color: #15161a;
+  font-family: Gilroy;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.country-search-input::placeholder {
+  color: #15161a;
+}
+
+.country-select-box {
+  position: relative;
+}
+
+/* Выпадающий список */
+.country-box {
+  position: absolute;
+  top: 50%;
+  padding-top: 2rem;
+  left: 0;
+  right: 0;
+
+  border: 2px solid #4ebdf5;
+  border-radius: 12px;
+  background-color: #fff;
+  display: flex;
+
+  display: none;
+}
+
+.country-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 1.6rem 2.8rem;
+  max-height: 20rem;
+  overflow-y: scroll;
+  z-index: 10;
+}
+
+/* Элементы списка */
+.country-item {
+  color: #15161a;
+
+  font-family: Gilroy;
+  font-size: 18px;
+
+  font-weight: 400;
+}
+
+/* Стилизация полосы прокрутки */
+.country-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.country-list::-webkit-scrollbar-thumb {
+  background-color: #4ebdf5;
+  border-radius: 4px;
+}
+
+.country-list::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}

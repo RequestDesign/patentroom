@@ -18,6 +18,14 @@
   }
 }
 
+.txt18_600 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  @media (max-width: 48rem) {
+    font-size: 3.2rem;
+  }
+}
+
 .txt18_bold {
   font-size: 1.8rem;
   font-style: normal;
@@ -145,6 +153,14 @@
   font-size: 1.6rem;
   font-weight: 400;
   text-transform: uppercase;
+  @media (max-width: 48rem) {
+    font-size: 2.4rem;
+  }
+}
+
+.txt14 {
+  font-size: 1.4rem;
+  font-weight: 400;
   @media (max-width: 48rem) {
     font-size: 2.4rem;
   }

@@ -47,3 +47,15 @@
 @import "./css/components/article.css";
 @import "./css/components/new-comment.css";
 @import "./css/components/all-com.css";
+@import "./css/pages/account.css";
+@import "./css/components/modal-acc.css";
+@import "./css/pages/account-app.css";
+@import "./css/pages/account-data.css";
+@import "./css/pages/account-req.css";
+@import "./css/pages/acc-req-verif.css";
+@import "./css/pages/req-no-result.css";
+@import "./css/pages/acс-agr.css";
+@import "./css/pages/acc-partner.css";
+@import "./css/components/acc-partner-ref.css";
+@import "./css/components/acc-partner-dtl.css";
+@import "./css/pages/acc-search.css";

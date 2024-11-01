@@ -111,11 +111,12 @@
   align-items: center;
 }
 
-.srvcs-item-price {
+.item-price {
+  width: max-content;
   z-index: 10;
   transition: opacity 0.2s ease-in-out;
   height: 4.8rem;
-  width: 14.1rem;
+  padding: 0rem 2rem;
   border-radius: 100px;
   border: 2px solid rgba(78, 189, 245, 0.4);
   display: flex;
@@ -128,7 +129,7 @@
   @media (max-width: 48em) {
     border-radius: 100px;
     height: 8.4rem;
-    width: 22.5rem;
+    padding: 0rem 3.2rem;
     font-size: 3.2rem;
     line-height: normal;
   }

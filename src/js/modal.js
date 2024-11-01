@@ -24,3 +24,22 @@ $('[data-modal="modal-search"]').on("click", () => {
   $("#modal-search").addClass("modal-active");
   $("body").addClass("no-scroll");
 });
+
+//модалка аккаун-меню
+$(document).ready(function () {
+  $('[data-modal="modal-acc"]').on("click", function () {
+    const modal = $("#modal-acc");
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    if (isMobile) {
+      modal.toggleClass("active");
+
+      $("#menu-acc").toggleClass("visible hidden");
+      $("#close-acc").toggleClass("hidden visible");
+    }
+  });
+
+  $(".hide-mobile[data-modal='modal-acc']").on("click", function () {
+    $("#modal-acc").toggleClass("active");
+  });
+});

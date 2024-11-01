@@ -37,7 +37,11 @@ $(document).ready(function () {
   }
 
   // Универсальная валидация
-  function validateField(value, validators) {
+  function validateField(value, validators, isRequired) {
+    // Если поле не обязательно и пустое, возвращаем успех
+    if (!isRequired && value.trim() === "") return "";
+
+    // Проверка всех валидаторов для обязательного поля или заполненного необязательного
     for (const { test, message } of validators) {
       if (!test(value)) return message;
     }
@@ -46,6 +50,104 @@ $(document).ready(function () {
 
   // Валидаторы для каждого поля
   const validators = {
+    ogrnip: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+      {
+        test: (val) => /^\d{15}$/.test(val),
+        message: "ОГРНИП должен содержать ровно 15 цифр",
+      },
+    ],
+    ogrn: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+      {
+        test: (val) => /^[0-9]{13}$/.test(val),
+        message: "ОГРН должен содержать 13 цифр",
+      },
+    ],
+    kpp: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+      {
+        test: (val) => /^[0-9]{9}$/.test(val),
+        message: "КПП должен содержать 9 цифр",
+      },
+    ],
+    organization: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+    ],
+    basedOn: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+    ],
+    representative: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+    ],
+    fullName: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+      {
+        test: (val) => /^[А-Яа-яЁёA-Za-z\s]+(\s[А-Яа-яA-Z]\.){2}$/.test(val),
+        message: "Введите ФИО в формате Иванов И.И.",
+      },
+    ],
+    patronymic: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+      {
+        test: (val) => /^[А-Яа-яЁёA-Za-z\s]+$/.test(val),
+        message: "Отчество должно содержать только буквы и пробелы",
+      },
+    ],
+    snils: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+      {
+        test: (val) => /^[0-9]{3}-[0-9]{3}-[0-9]{3} [0-9]{2}$/.test(val),
+        message: "Формат: 000-000-000 00",
+      },
+    ],
+    inn: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+      {
+        test: (val) => /^[0-9]{10,12}$/.test(val),
+        message: "ИНН должен содержать 10 или 12 цифр",
+      },
+    ],
+    bankName: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+    ],
+    bik: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+      {
+        test: (val) => /^[0-9]{9}$/.test(val),
+        message: "БИК должен содержать 9 цифр",
+      },
+    ],
+    accountNumber: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+      {
+        test: (val) => /^[0-9]{20}$/.test(val),
+        message: "Расчетный счет должен содержать 20 цифр",
+      },
+    ],
+
+    registrationAddress: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+    ],
+    postalAddress: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+    ],
+    passportSeries: [
+      { test: (val) => /^[0-9]{4}$/.test(val), message: "Введите 4 цифры" },
+    ],
+    passportNumber: [
+      { test: (val) => /^[0-9]{6}$/.test(val), message: "Введите 6 цифр" },
+    ],
+    passportDate: [{ test: (val) => val !== "", message: "Выберите дату" }],
+    departmentCode: [
+      {
+        test: (val) => /^[0-9]{3}-[0-9]{3}$/.test(val),
+        message: "Формат: 000-000",
+      },
+    ],
+    issuedBy: [
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+    ],
     login: [
       { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
       {
@@ -73,6 +175,14 @@ $(document).ready(function () {
       {
         test: (val) => /^[А-Яа-яЁёA-Za-z\s]+$/.test(val),
         message: "Имя должно состоять только из букв и пробелов",
+      },
+    ],
+    surname: [
+      // Добавляем валидацию для фамилии
+      { test: (val) => val.trim() !== "", message: "Это поле обязательно" },
+      {
+        test: (val) => /^[А-Яа-яЁёA-Za-z\s]+$/.test(val),
+        message: "Фамилия должна состоять только из букв и пробелов",
       },
     ],
     phone: function (formId) {
@@ -116,7 +226,13 @@ $(document).ready(function () {
         typeof validators[fieldName] === "function"
           ? validators[fieldName](formId)
           : validators[fieldName];
-      const errorMessage = validateField(field.val(), fieldValidators);
+
+      const isRequired = field.prop("required"); // Проверяем, является ли поле обязательным
+      const errorMessage = validateField(
+        field.val(),
+        fieldValidators,
+        isRequired
+      );
       toggleError(field, form, `${fieldName}-error`, errorMessage);
       return !errorMessage;
     }
@@ -254,19 +370,6 @@ $(document).ready(function () {
       }
 
       form.find('button[type="submit"]').addClass("button-inactive");
-    }
-  });
-});
-
-$(document).ready(function () {
-  $("#togglePassword").on("click", function () {
-    let passwordField = $("#password");
-
-    // Если тип поля password, то меняем на текст и наоборот
-    if (passwordField.attr("type") === "password") {
-      passwordField.attr("type", "text");
-    } else {
-      passwordField.attr("type", "password");
     }
   });
 });

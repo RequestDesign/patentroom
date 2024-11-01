@@ -25,9 +25,10 @@
   top: 0px;
   right: 0px;
   transition: opacity 0.5s ease 0s, visibility 0.5s, z-index 0.5s;
-  background-color: rgba(21, 21, 21, 0.5);
+  background-color: #15161a;
   background-image: url("../../assets/images/back-calculator.png");
   background-size: 100%;
+
   opacity: 0;
   visibility: hidden;
   @media (max-width: 48rem) {

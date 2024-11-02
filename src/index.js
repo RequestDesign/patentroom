@@ -401,87 +401,25 @@ $(document).ready(function () {
   });
 });
 
-//страны
+//acc-search__filter-cl_list
 $(document).ready(function () {
-  // Переключение видимости country-box при клике на input или стрелку
-  $(".country-search-input, .arrow-country").on("click", function () {
-    const countrySearchInput = $(".country-search-input");
-    const countryBox = $("#country-box");
+  const itemList = $(".acc-search__filter-cl_list");
 
-    // При открытии очищаем поле и делаем его доступным для ввода
-    if (countryBox.is(":hidden")) {
-      countrySearchInput.val("").removeAttr("readonly");
-    } else {
-      // При закрытии, если поле пустое, восстанавливаем плейсхолдер "Все страны"
-      if (!countrySearchInput.val().trim()) {
-        countrySearchInput.val("Все страны").attr("readonly", true);
-      }
-    }
+  // Создаем массив чисел от 1 до 45 и добавляем первый элемент "Все"
+  const items = ["Все", ...Array.from({ length: 45 }, (_, i) => i + 1)];
 
-    countryBox.toggle(); // Переключаем видимость списка стран
-    $(".arrow-country-down").toggle(); // Переключаем видимость стрелки вниз
-    $(".arrow-country-up").toggle(); // Скрываем видимость стрелки вверх
-  });
+  // Добавляем элементы в список
+  items.forEach((item, index) => {
+    const listItem = $(`<li><p class="txt24-days">${item}</p></li>`);
+    if (index === 0) listItem.addClass("active"); // Добавляем класс "active" к первому элементу
 
-  // Закрытие списка стран при клике вне его области
-  $(document).on("click", function (event) {
-    const target = $(event.target);
-    if (!target.closest(".country-select-container").length) {
-      $("#country-box").hide(); // Скрываем список
-      $(".arrow-country-down").show(); // Показываем стрелку вниз
-      $(".arrow-country-up").hide(); // Скрываем стрелку вверх
-      // Если поле пустое, устанавливаем плейсхолдер и атрибут readonly
-      if (!$(".country-search-input").val().trim()) {
-        $(".country-search-input").val("Все страны").attr("readonly", true);
-      }
-    }
-  });
-
-  // Загрузка списка стран из JSON и добавление в .country-list
-  $.getJSON(
-    "https://raw.githubusercontent.com/umpirsky/country-list/master/data/ru/country.json",
-    function (data) {
-      const countryList = $(".country-list");
-      countryList.empty(); // Очищаем список перед добавлением стран
-
-      $.each(data, function (code, name) {
-        countryList.append(
-          `<div class="country-item" data-code="${code}">${name}</div>`
-        );
-      });
-
-      // Добавляем элемент для сообщения "Ничего не найдено" и скрываем его по умолчанию
-      countryList.append(
-        `<div class="no-results" style="display: none;">Ничего не найдено</div>`
-      );
-    }
-  );
-
-  // Обработчик поиска по странам
-  $(".country-search-input").on("input", function () {
-    const searchQuery = $(this).val().toLowerCase();
-    let hasResults = false;
-
-    // Фильтрация списка стран
-    $(".country-item").each(function () {
-      const countryName = $(this).text().toLowerCase();
-      const matches = countryName.includes(searchQuery);
-      $(this).toggle(matches);
-
-      if (matches) hasResults = true; // Если есть совпадение, ставим флаг в true
+    // Добавляем обработчик клика для каждого элемента
+    listItem.on("click", function () {
+      // Убираем "active" со всех элементов и добавляем его к текущему
+      itemList.find("li").removeClass("active");
+      $(this).addClass("active");
     });
 
-    // Показ сообщения "Ничего не найдено", если совпадений нет
-    $(".no-results").toggle(!hasResults);
-  });
-
-  // Обработчик клика по стране из списка
-  $(document).on("click", ".country-item", function () {
-    const selectedCountry = $(this).text();
-    $(".country-search-input").val(selectedCountry); // Устанавливаем выбранную страну в input
-    $("#country-box").hide(); // Закрываем список
-    $(".arrow-country-down").show(); // Показываем стрелку вниз
-    $(".arrow-country-up").hide(); // Скрываем стрелку вверх
-    $(".country-search-input").attr("readonly", true); // Возвращаем атрибут readonly
+    itemList.append(listItem);
   });
 });

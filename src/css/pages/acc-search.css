@@ -28,11 +28,11 @@
 .acc-search .search-result__block-search {
   max-width: 142.1rem;
   @media (max-width: 48rem) {
-    max-width: 59rem;
+    max-width: 57rem;
   }
 }
 
-.acc-search .btn {
+.acc-search__block-search .btn {
   @media (max-width: 48rem) {
     padding: 0rem;
   }
@@ -62,6 +62,7 @@
 }
 
 .acc-search-cat__item {
+  width: max-content;
   height: 5.7rem;
   padding: 0rem 2.8rem;
   display: flex;
@@ -93,19 +94,26 @@
 
 .acc-search__filter {
   margin-top: 2.2rem;
-  margin-bottom: 20rem;
+  @media (max-width: 48rem) {
+    margin-top: 6.4rem;
+  }
 }
 
 .acc-search__filter-box {
   display: flex;
   flex-direction: column;
   gap: 4.8rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+  }
 }
+
 .acc-search__filter-group {
   display: flex;
   gap: 3.2rem;
   @media (max-width: 48rem) {
     flex-direction: column;
+    gap: 5.6rem;
   }
 }
 
@@ -118,15 +126,23 @@
   background-color: white;
   border-radius: 100px;
   border: 2px solid #4ebdf5;
+  @media (max-width: 48rem) {
+    height: 9.6rem;
+    padding: 0rem 4rem;
+  }
 }
 
 .filter-input {
   color: #15161a;
-  font-family: Gilroy;
+  font-family: "Gilory";
   font-size: 1.8rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  width: 100%;
+  @media (max-width: 48rem) {
+    font-family: Inter, sans-serif;
+    line-height: 140%;
+    font-size: 2.8rem;
+  }
 }
 
 .filter-input::placeholder {
@@ -136,6 +152,11 @@
 .filter-country {
   max-width: 35.6rem;
   padding-right: 1.6rem;
+  @media (max-width: 48rem) {
+    max-width: 100%;
+    width: 100%;
+    padding-right: 4rem;
+  }
 }
 
 .country-select-container {
@@ -144,13 +165,22 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-right: 1.6rem;
+  align-items: center;
+
   z-index: 1;
+  @media (max-width: 48rem) {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .arrow-country {
   width: 2.4rem;
   height: 2.4rem;
+  @media (max-width: 48rem) {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
 }
 
 .arrow-country-up {
@@ -168,11 +198,14 @@
 .country-search-input {
   width: max-content;
   color: #15161a;
-  font-family: Gilroy;
+  font-family: "Gilory";
   font-size: 1.8rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  @media (max-width: 48rem) {
+    font-family: Inter, sans-serif;
+    line-height: 140%;
+    font-size: 2.8rem;
+  }
 }
 
 .country-search-input::placeholder {
@@ -187,16 +220,20 @@
 .country-box {
   position: absolute;
   top: 50%;
-  padding-top: 2rem;
+  padding-top: 3.5rem;
   left: 0;
   right: 0;
 
   border: 2px solid #4ebdf5;
-  border-radius: 12px;
+  border-radius: 2.4rem;
   background-color: #fff;
   display: flex;
-
+  overflow: hidden;
   display: none;
+  @media (max-width: 48rem) {
+    padding-top: 5rem;
+    border-radius: 4.8rem;
+  }
 }
 
 .country-list {
@@ -206,29 +243,106 @@
   padding: 1.6rem 2.8rem;
   max-height: 20rem;
   overflow-y: scroll;
+  overflow-x: hidden;
   z-index: 10;
+  position: relative;
+  @media (max-width: 48rem) {
+    max-height: 50rem;
+    gap: 4rem;
+    padding: 3.2rem 5.6rem;
+  }
 }
 
 /* Элементы списка */
 .country-item {
   color: #15161a;
-
-  font-family: Gilroy;
-  font-size: 18px;
-
+  font-family: "Gilory";
+  font-size: 1.8rem;
   font-weight: 400;
+  @media (max-width: 48rem) {
+    font-family: Inter, sans-serif;
+    line-height: 140%;
+    font-size: 2.8rem;
+  }
 }
 
 /* Стилизация полосы прокрутки */
 .country-list::-webkit-scrollbar {
-  width: 8px;
+  width: 3px;
 }
 
 .country-list::-webkit-scrollbar-thumb {
-  background-color: #4ebdf5;
+  background-color: #9be931;
   border-radius: 4px;
+  height: 40%;
 }
 
 .country-list::-webkit-scrollbar-track {
-  background: #f0f0f0;
+  background: rgba(21, 22, 26, 0.2);
+}
+
+.acc-search__filter-class {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+  }
+}
+
+.acc-search__filter-class .txt24-days {
+  color: white;
+}
+
+.acc-search__filter-cl_list {
+  display: flex;
+  gap: 2.4rem;
+  flex-wrap: wrap;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+  }
+}
+
+.acc-search__filter-cl_list .txt24-days {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.acc-search__filter-cl_list .active .txt24-days {
+  color: #4ebdf5;
+}
+
+.acc-search__filter-btm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 6.4rem;
+    align-items: start;
+  }
+}
+
+.acc-search__filter-btn {
+  display: flex;
+  gap: 5.6rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 6.4rem;
+  }
+}
+
+.acc-search__filter-btn span {
+  color: white;
+  width: max-content;
+}
+
+.acc-search__filter-btn .acc-search-cat__list {
+  position: relative;
+  width: 100%;
+}
+
+.acc-search__filter-btm .btn {
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
 }

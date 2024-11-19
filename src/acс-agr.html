@@ -12,7 +12,7 @@
     <title>Личный кабинет(ваши заявки)</title>
   </head>
   <body class="account-back">
-    <!-- модалка "спасибо за пописку"-->
+    <!-- модалка "спасибо за подписку"-->
     <div class="modal" id="modal-success">
       <div class="modal-container">
         <div class="modal-wrapper">
@@ -51,7 +51,7 @@
                 <img src="./assets/images/icon-close.svg" alt="icon-close" />
               </button>
               <h2 class="txt36-days">подпишитесь на нашу рассылку</h2>
-              <form class="form-nl" id="form" novalidate>
+              <form class="form-nl" id="form-nl" novalidate>
                 <label class="form-label">
                   <input
                     id="email"
@@ -180,239 +180,210 @@
         <div class="container">
           <div class="account__content acc-agr__content">
             <div class="account__top"><h1 class="text-white">Договор</h1></div>
-            <div class="account__block-form">
-              <form class="account__form" id="individ" action="" novalidate>
-                <p class="txt24-days">
-                  Выберите тип заказчика для оформления договора:
-                </p>
-                <div class="account__form-btns_box">
-                  <div class="account__form-btns">
-                    <button
-                      class="account__form-btn active"
-                      data-target="individ"
-                    >
-                      <p class="txt16_bold">Физическое лицо</p>
-                    </button>
-                    <button class="account__form-btn" data-target="legal">
-                      <p class="txt16_bold">Юридическое лицо</p>
-                    </button>
-                    <button class="account__form-btn" data-target="entrepr">
-                      <p class="txt16_bold">Индивидуальный предприниматель</p>
-                    </button>
+            <form class="account-form" id="form-agr" novalidate>
+              <div class="account-form-content">
+                <div class="account-form-top">
+                  <p class="txt24-days">
+                    Выберите тип заказчика для оформления договора:
+                  </p>
+                </div>
+                <div class="account-form-box">
+                  <div class="account-form-options">
+                    <div class="account-form-options__box">
+                      <button
+                        class="account-form-option active"
+                        data-target="individ"
+                      >
+                        <p class="txt16_bold">Физическое лицо</p>
+                      </button>
+                      <button class="account-form-option" data-target="legal">
+                        <p class="txt16_bold">Юридическое лицо</p>
+                      </button>
+                      <button class="account-form-option" data-target="entrepr">
+                        <p class="txt16_bold">Индивидуальный предприниматель</p>
+                      </button>
+                    </div>
                   </div>
                 </div>
-                <ul class="account__form-list">
-                  <li class="account__form-item">
-                    <label class="form-label">
-                      <input
-                        id="surname"
-                        class="form-input"
-                        type="text"
-                        placeholder="Фамилия"
-                        required
-                      />
-                      <span class="error-message" id="surname-error"></span>
-                    </label>
-                    <label class="form-label">
-                      <input
-                        id="name"
-                        class="form-input"
-                        type="text"
-                        placeholder="Имя"
-                        required
-                      />
-                      <span class="error-message" id="name-error"></span>
-                    </label>
-                    <label class="form-label">
-                      <input
-                        id="patronymic"
-                        class="form-input"
-                        type="text"
-                        placeholder="Отчество"
-                        required
-                      />
-                      <span class="error-message" id="patronymic-error"></span>
-                    </label>
-                    <label class="form-label">
-                      <input
-                        id="fullName"
-                        class="form-input"
-                        type="text"
-                        placeholder="ФИО (с инициалами)"
-                        required
-                      />
-                      <span class="error-message" id="fullName-error"></span>
-                    </label>
-                  </li>
-                  <li class="account__form-item">
-                    <label class="form-label">
-                      <input
-                        id="registrationAddress"
-                        class="form-input"
-                        type="text"
-                        placeholder="Адрес регистрации с индексом"
-                        required
-                      />
-                      <span
-                        class="error-message"
-                        id="registrationAddress-error"
-                      ></span>
-                    </label>
-                    <label class="form-label">
-                      <input
-                        id="postalAddress"
-                        class="form-input"
-                        type="text"
-                        placeholder="Почтовый адрес с индексом"
-                        required
-                      />
-                      <span
-                        class="error-message"
-                        id="postalAddress-error"
-                      ></span>
-                    </label>
-                  </li>
-                </ul>
-                <p class="txt24-days">Паспорт</p>
-                <ul class="account__form-list">
-                  <li class="account__form-item">
-                    <label class="form-label">
-                      <input
-                        id="passportSeries"
-                        class="form-input"
-                        type="text"
-                        placeholder="Серия"
-                        required
-                      />
-                      <span
-                        class="error-message"
-                        id="passportSeries-error"
-                      ></span>
-                    </label>
-                    <label class="form-label">
-                      <input
-                        id="passportNumber"
-                        class="form-input"
-                        type="text"
-                        placeholder="Номер"
-                        required
-                      />
-                      <span
-                        class="error-message"
-                        id="passportNumber-error"
-                      ></span>
-                    </label>
-                    <label class="form-label">
-                      <input
-                        id="passportDate"
-                        class="form-input"
-                        type="date"
-                        placeholder="Дата выдачи"
-                        required
-                      />
-                      <span
-                        class="error-message"
-                        id="passportDate-error"
-                      ></span>
-                    </label>
-                    <label class="form-label">
-                      <input
-                        id="departmentCode"
-                        class="form-input"
-                        type="text"
-                        placeholder="Код подразделения"
-                        required
-                      />
-                      <span
-                        class="error-message"
-                        id="departmentCode-error"
-                      ></span>
-                    </label>
-                  </li>
-                  <li class="account__form-item">
-                    <label class="form-label">
-                      <input
-                        id="issuedBy"
-                        class="form-input"
-                        type="text"
-                        placeholder="Кем выдан"
-                        required
-                      />
-                      <span class="error-message" id="issuedBy-error"></span>
-                    </label>
-                  </li>
-                </ul>
+                <div class="account-form-block" id="individ">
+                  <div class="account-form-section">
+                    <p class="txt24-days">Банковские реквизиты</p>
+                    <ul class="account-form-list">
+                      <li class="account-form-item">
+                        <label class="form-label">
+                          <input
+                            id="surname"
+                            class="form-input"
+                            type="text"
+                            placeholder="Фамилия"
+                            required
+                          />
+                          <span class="error-message" id="surname-error"></span>
+                        </label>
+                        <label class="form-label">
+                          <input
+                            id="name"
+                            class="form-input"
+                            type="text"
+                            placeholder="Имя"
+                            required
+                          />
+                          <span class="error-message" id="name-error"></span>
+                        </label>
+                        <label class="form-label">
+                          <input
+                            id="patronymic"
+                            class="form-input"
+                            type="text"
+                            placeholder="Отчество"
+                            required
+                          />
+                          <span
+                            class="error-message"
+                            id="patronymic-error"
+                          ></span>
+                        </label>
+                        <label class="form-label">
+                          <input
+                            id="fullName"
+                            class="form-input"
+                            type="text"
+                            placeholder="ФИО (с инициалами)"
+                            required
+                          />
+                          <span
+                            class="error-message"
+                            id="fullName-error"
+                          ></span>
+                        </label>
+                      </li>
+                      <li class="account-form-item">
+                        <label class="form-label">
+                          <input
+                            id="registrationAddress"
+                            class="form-input"
+                            type="text"
+                            placeholder="Адрес регистрации с индексом"
+                            required
+                          />
+                          <span
+                            class="error-message"
+                            id="registrationAddress-error"
+                          ></span>
+                        </label>
+                        <label class="form-label">
+                          <input
+                            id="postalAddress"
+                            class="form-input"
+                            type="text"
+                            placeholder="Почтовый адрес с индексом"
+                            required
+                          />
+                          <span
+                            class="error-message"
+                            id="postalAddress-error"
+                          ></span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="account-form-section">
+                    <p class="txt24-days">Паспорт</p>
+                    <ul class="account-form-list">
+                      <li class="account-form-item">
+                        <label class="form-label">
+                          <input
+                            id="passportSeries"
+                            class="form-input"
+                            type="text"
+                            placeholder="Серия"
+                            required
+                          />
+                          <span
+                            class="error-message"
+                            id="passportSeries-error"
+                          ></span>
+                        </label>
+                        <label class="form-label">
+                          <input
+                            id="passportNumber"
+                            class="form-input"
+                            type="text"
+                            placeholder="Номер"
+                            required
+                          />
+                          <span
+                            class="error-message"
+                            id="passportNumber-error"
+                          ></span>
+                        </label>
+                        <label class="form-label">
+                          <input
+                            id="passportDate"
+                            class="form-input"
+                            type="date"
+                            placeholder="Дата выдачи"
+                            required
+                          />
+                          <span
+                            class="error-message"
+                            id="passportDate-error"
+                          ></span>
+                        </label>
+                        <label class="form-label">
+                          <input
+                            id="departmentCode"
+                            class="form-input"
+                            type="text"
+                            placeholder="Код подразделения"
+                            required
+                          />
+                          <span
+                            class="error-message"
+                            id="departmentCode-error"
+                          ></span>
+                        </label>
+                      </li>
+                      <li class="account-form-item">
+                        <label class="form-label">
+                          <input
+                            id="issuedBy"
+                            class="form-input"
+                            type="text"
+                            placeholder="Кем выдан"
+                            required
+                          />
+                          <span
+                            class="error-message"
+                            id="issuedBy-error"
+                          ></span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="account-form-block" id="legal">
+                  <div class="account-form-section">
+                    <p class="txt24-days">
+                      Здесь будет форма для Юридическое лицо
+                    </p>
+                  </div>
+                </div>
+                <div class="account-form-block" id="entrepr">
+                  <div class="account-form-section">
+                    <p class="txt24-days">
+                      Здесь будет форма для Индивидуального предпринимателя
+                    </p>
+                  </div>
+                </div>
                 <button
                   class="btn btn-blue btn-primary button-inactive"
                   type="submit"
                 >
                   Создать договор
                 </button>
-              </form>
-              <form
-                class="account__form"
-                id="legal"
-                action=""
-                novalidate
-                style="display: none"
-              >
-                <div class="account__form-top">
-                  <p class="txt24-days">Укажите ваши реквизиты</p>
-                </div>
-                <div class="account__form-btns_box">
-                  <div class="account__form-btns">
-                    <button class="account__form-btn" data-target="individ">
-                      <p class="txt16_bold">Физическое лицо</p>
-                    </button>
-                    <button
-                      class="account__form-btn active"
-                      data-target="legal"
-                    >
-                      <p class="txt16_bold">Юридическое лицо</p>
-                    </button>
-                    <button class="account__form-btn" data-target="entrepr">
-                      <p class="txt16_bold">Индивидуальный предприниматель</p>
-                    </button>
-                  </div>
-                </div>
-
-                <p class="txt24-days">
-                  Здесь будет форма для Юридического лица
-                </p>
-              </form>
-
-              <form
-                class="account__form"
-                id="entrepr"
-                action=""
-                novalidate
-                style="display: none"
-              >
-                <div class="account__form-top">
-                  <p class="txt24-days">Укажите ваши реквизиты</p>
-                </div>
-                <div class="account__form-btns_box">
-                  <div class="account__form-btns">
-                    <button class="account__form-btn" data-target="individ">
-                      <p class="txt16_bold">Физическое лицо</p>
-                    </button>
-                    <button class="account__form-btn" data-target="legal">
-                      <p class="txt16_bold">Юридическое лицо</p>
-                    </button>
-                    <button
-                      class="account__form-btn active"
-                      data-target="entrepr"
-                    >
-                      <p class="txt16_bold">Индивидуальный предприниматель</p>
-                    </button>
-                  </div>
-                </div>
-
-                <p class="txt24-days">
-                  Здесь будет форма для Индивидуального предпринимателя
-                </p>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -547,7 +518,7 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="./js/form.js" defer></script>
     <script src="https://unpkg.com/imask" defer></script>
     <script src="./index.js" defer></script>
     <script src="./js/modal.js" defer></script>

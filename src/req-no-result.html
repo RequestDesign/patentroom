@@ -12,7 +12,7 @@
     <title>Личный кабинет(ваши заявки)</title>
   </head>
   <body class="account-back">
-    <!-- модалка "спасибо за пописку"-->
+    <!-- модалка "спасибо за подписку"-->
     <div class="modal" id="modal-success">
       <div class="modal-container">
         <div class="modal-wrapper">
@@ -51,7 +51,7 @@
                 <img src="./assets/images/icon-close.svg" alt="icon-close" />
               </button>
               <h2 class="txt36-days">подпишитесь на нашу рассылку</h2>
-              <form class="form-nl" id="form" novalidate>
+              <form class="form-nl" id="form-nl" novalidate>
                 <label class="form-label">
                   <input
                     id="email"
@@ -183,15 +183,20 @@
               <h1 class="text-white hide-mobile">Заявки на регистрацию</h1>
               <h1 class="text-white hide-desktop">Ваши заявки</h1>
               <div class="account-req__top-right">
-                <button class="account-req__top-btn" data-target="active-order">
-                  <p class="txt22_bold">Активные</p>
-                </button>
-                <button
-                  class="account-req__top-btn"
-                  data-target="completed-order"
-                >
-                  <p class="txt22_bold">Завершённые</p>
-                </button>
+                <div class="account-req__top-btns">
+                  <button
+                    class="account-req__top-btn"
+                    data-target="active-order"
+                  >
+                    <p class="txt22_bold">Активные</p>
+                  </button>
+                  <button
+                    class="account-req__top-btn"
+                    data-target="completed-order"
+                  >
+                    <p class="txt22_bold">Завершённые</p>
+                  </button>
+                </div>
               </div>
             </div>
             <div class="no-result__btm">
@@ -343,7 +348,7 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="./js/account-req.js" defer></script>
     <script src="https://unpkg.com/imask" defer></script>
     <script src="./index.js" defer></script>
     <script src="./js/modal.js" defer></script>

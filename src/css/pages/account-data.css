@@ -19,6 +19,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
   @media (max-width: 48rem) {
     border-radius: 3.2rem;
     flex-direction: column;
@@ -28,6 +29,7 @@
 }
 
 .account-data__prf {
+  height: max-content;
   row-gap: 3.2rem;
   width: 108.4rem;
   background-image: url(../../assets/images/back1-acc-data.png);
@@ -88,6 +90,7 @@
   width: 52.6rem;
   background-image: url(../../assets/images/back2-acc-data.png);
   align-content: flex-start;
+  min-height: 36.8rem;
   @media (max-width: 48rem) {
     width: 100%;
     gap: 4.8rem;

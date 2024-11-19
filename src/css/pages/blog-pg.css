@@ -68,10 +68,10 @@
   color: white;
 }
 
-.blog-pg__menu-item:hover {
+.blog-pg__menu-item.active {
   background-color: white;
 }
 
-.blog-pg__menu-item:hover .txt22_bold {
+.blog-pg__menu-item.active .txt22_bold {
   color: #15161a;
 }

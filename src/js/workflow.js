@@ -6,7 +6,7 @@ $(document).ready(function () {
 
   // Обработчик клика на кнопки
   $(".workflow__item").on("click", function () {
-    var index = $(this).index(); // Получаем индекс кнопки
+    var index = $(this).index();
 
     // Скрываем все описания и изображения, убираем активные классы
     $(".workflow__description").hide();

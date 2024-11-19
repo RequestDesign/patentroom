@@ -118,7 +118,7 @@
   }
 }
 
-.modal__right .txt18:last-of-type {
+.modal__right .txt18 {
   opacity: 80%;
   color: #1f1f1fcc;
 }
@@ -127,6 +127,8 @@
   position: absolute;
   right: 0px;
   top: 0px;
+  width: 3.2rem;
+  height: 3.2rem;
   @media (max-width: 48rem) {
     width: 6.4rem;
     height: 6.4rem;

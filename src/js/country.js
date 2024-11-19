@@ -4,24 +4,24 @@ $(document).ready(function () {
   const arrowDown = $(".arrow-country-down");
   const arrowUp = $(".arrow-country-up");
 
-  // Переключение видимости country-box при клике на стрелку
+  // Переключение видимости country-box при клике на стрелку вниз
   arrowDown.on("click", function () {
-    toggleCountryBox(); // Вызов функции для переключения видимости списка
+    toggleCountryBox();
   });
 
   arrowUp.on("click", function () {
-    toggleCountryBox(); // Закрытие списка при нажатии на стрелку вверх
+    toggleCountryBox();
   });
 
-  // Открытие country-box при клике на input, но без повторного закрытия
+  // Открытие country-box при клике на input
   countrySearchInput.on("click", function () {
     if (countryBox.is(":hidden")) {
       countrySearchInput.val("").removeAttr("readonly");
       countryBox.show();
       arrowDown.hide();
       arrowUp.show();
-      $(".country-item").show(); // Показываем все страны при открытии
-      $(".no-results").hide(); // Скрываем сообщение "Ничего не найдено"
+      $(".country-item").show();
+      $(".no-results").hide();
     }
   });
 
@@ -29,7 +29,7 @@ $(document).ready(function () {
   $(document).on("click", function (event) {
     const target = $(event.target);
     if (!target.closest(".country-select-container").length) {
-      closeCountryBox(); // Закрываем список
+      closeCountryBox();
     }
   });
 
@@ -40,12 +40,14 @@ $(document).ready(function () {
     arrowUp.toggle();
 
     if (countryBox.is(":visible")) {
-      countrySearchInput.val("").removeAttr("readonly");
+      countrySearchInput.val("").removeAttr("readonly"); // Очистка поля при открытии
       $(".country-item").show();
       $(".no-results").hide();
     } else {
+      // Устанавливаем placeholder, если поле пустое
       if (!countrySearchInput.val().trim()) {
-        countrySearchInput.val("Все страны").attr("readonly", true);
+        const placeholderText = countrySearchInput.data("placeholder");
+        countrySearchInput.val(placeholderText).attr("readonly", true);
       }
     }
   }
@@ -56,8 +58,10 @@ $(document).ready(function () {
     arrowDown.show();
     arrowUp.hide();
 
+    // Устанавливаем placeholder, если поле пустое
     if (!countrySearchInput.val().trim()) {
-      countrySearchInput.val("Все страны").attr("readonly", true);
+      const placeholderText = countrySearchInput.data("placeholder");
+      countrySearchInput.val(placeholderText).attr("readonly", true);
     }
   }
 

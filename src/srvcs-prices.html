@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <link href="./index.css" rel="stylesheet" />
-    <title>Логин (Войти)</title>
+    <title>Услуги и цены</title>
   </head>
   <body class="cat-pricing-back">
     <!-- модалка меню -->
@@ -238,7 +238,7 @@
       </div>
     </div>
 
-    <!-- модалка "спасибо за пописку"-->
+    <!-- модалка "спасибо за подписку"-->
     <div class="modal" id="modal-success">
       <div class="modal-container">
         <div class="modal-wrapper">
@@ -277,7 +277,7 @@
                 <img src="./assets/images/icon-close.svg" alt="icon-close" />
               </button>
               <h2 class="txt36-days">подпишитесь на нашу рассылку</h2>
-              <form class="form-nl" id="form" novalidate>
+              <form class="form-nl" id="form-nl" novalidate>
                 <label class="form-label">
                   <input
                     id="email"
@@ -296,6 +296,31 @@
                   Подписаться
                 </button>
               </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- модалка "заявка отправлена" -->
+    <div class="modal modal-bid" id="modal-bid">
+      <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-content">
+            <div class="modal__left-img">
+              <img src="./assets/images/modal-sculpture.png" alt="sculpture" />
+            </div>
+            <div class="modal__right">
+              <button class="modal-close">
+                <img src="./assets/images/icon-close.svg" alt="icon-close" />
+              </button>
+              <h2 class="txt36-days">Ваша заявка отправлена</h2>
+              <p class="txt18">
+                В ближайшее время с Вами свяжется наш менеджер
+              </p>
+              <a class="btn btn-blue btn-primary" href="./main.html"
+                >на главную</a
+              >
             </div>
           </div>
         </div>
@@ -643,7 +668,7 @@
                 </ul>
               </div>
               <div class="cat-pricing__right">
-                <form class="form-cat-pricing" id="form" novalidate>
+                <form class="form-cat-pricing" id="form-support" novalidate>
                   <div class="form__txt-box">
                     <p class="txt36-days">Нужна помощь?</p>
                     <p class="form__txt">

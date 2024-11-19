@@ -1,8 +1,8 @@
 $(document).ready(function () {
   const $marqueeList = $(".marquee__list");
-  const itemWidth = $marqueeList.children().first().outerWidth(true); // ширина одного элемента с учетом отступов
-  const totalWidth = itemWidth * $marqueeList.children().length; // общая ширина
-  const animationDuration = totalWidth * 20; // длительность анимации (можно подстроить)
+  const itemWidth = $marqueeList.children().first().outerWidth(true);
+  const totalWidth = itemWidth * $marqueeList.children().length;
+  const animationDuration = totalWidth * 20;
 
   // Дублируем элементы, чтобы создать бесконечный эффект
   $marqueeList.append($marqueeList.html());
@@ -11,7 +11,7 @@ $(document).ready(function () {
   $marqueeList.append($marqueeList.html());
   // Устанавливаем начальную позицию
   $marqueeList.css({
-    width: totalWidth * 4 + "px", // удваиваем ширину
+    width: totalWidth * 4 + "px",
     animation: `marquee ${animationDuration}ms linear infinite`,
   });
 

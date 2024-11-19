@@ -25,15 +25,15 @@ function initializeSwiperWithButtons(
   // Обновление состояния кнопок
   function updateButtons() {
     if (swiperInstance.isBeginning) {
-      $(prevButtonId).addClass("inactive"); // Добавляем класс неактивной кнопке
+      $(prevButtonId).addClass("inactive");
     } else {
-      $(prevButtonId).removeClass("inactive"); // Убираем класс неактивности
+      $(prevButtonId).removeClass("inactive");
     }
 
     if (swiperInstance.isEnd) {
-      $(nextButtonId).addClass("inactive"); // Добавляем класс неактивной кнопке
+      $(nextButtonId).addClass("inactive");
     } else {
-      $(nextButtonId).removeClass("inactive"); // Убираем класс неактивности
+      $(nextButtonId).removeClass("inactive");
     }
   }
 
@@ -54,7 +54,7 @@ function initializeSwiperWithButtons(
 
   // Обновление состояния кнопок при изменении размера экрана
   $(window).on("resize", function () {
-    setTimeout(updateButtons, 300); // Добавляем небольшую задержку, чтобы дождаться завершения изменения размера
+    setTimeout(updateButtons, 300);
   });
 
   return swiperInstance;

@@ -21,7 +21,6 @@ $(document).ready(function () {
     startX = e.clientX || e.touches[0].clientX; // Получаем начальную позицию
   });
 
-  // Обработчик для завершения жеста
   $(".blog__slide-box").on("mouseup touchend", function (e) {
     endX = e.clientX || e.changedTouches[0].clientX; // Получаем конечную позицию
 
@@ -36,5 +35,16 @@ $(document).ready(function () {
 
   $("#blog-next").on("click", function () {
     $(".blog__slide-text").removeClass("text-active");
+  });
+});
+
+//переключения цвета кнопок
+$(document).ready(function () {
+  $(".blog-pg__menu-item").first().addClass("active");
+
+  $(".blog-pg__menu-item").on("click", function () {
+    $(".blog-pg__menu-item").removeClass("active");
+
+    $(this).addClass("active");
   });
 });

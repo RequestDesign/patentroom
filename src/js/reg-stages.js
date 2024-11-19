@@ -1,5 +1,6 @@
+// 9. Детальная услуги
 $(document).ready(function () {
-  let currentIndex = 0; // Текущий индекс
+  let currentIndex = 0;
 
   function updateContent(index) {
     // Скрываем все описания и изображения
@@ -15,13 +16,13 @@ $(document).ready(function () {
 
   // Обработчик клика по элементам списка
   $(".reg-stages__item").on("click", function () {
-    currentIndex = $(this).index(); // Обновляем текущий индекс
+    currentIndex = $(this).index();
     updateContent(currentIndex);
   });
 
   // Обработчик клика на кнопку переключения
   $(".reg-stages__btn").on("click", function () {
-    currentIndex = (currentIndex + 1) % $(".reg-stages__item").length; // Переход на следующий элемент
+    currentIndex = (currentIndex + 1) % $(".reg-stages__item").length;
     updateContent(currentIndex);
   });
 

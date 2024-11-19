@@ -42,7 +42,6 @@ class FormValidator {
       if (label.length) {
         label.toggleClass("upload-label-err", message !== ""); // Добавляем/убираем класс ошибки для label
       } else {
-        // Фолбэк: ищем ближайший родительский label, если инпут вложен в него
         field.closest("label").toggleClass("upload-label-err", message !== "");
       }
     }

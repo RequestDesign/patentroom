@@ -269,7 +269,7 @@
     transition: opacity 0.2s ease;
   }
 
-  .main-srvcs-item:hover .srvcs-item-price {
+  .main-srvcs-item:hover .item-price {
     opacity: 0;
     transition: opacity 0.2s ease;
   }

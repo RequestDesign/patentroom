@@ -405,31 +405,33 @@
                 >Зарегистрировать</a
               >
               <div class="dtl-srvcs-tm-box">
-                <ul class="tm-list">
-                  <li class="dtl-srvcs-tm-item">
-                    <div class="dtl-srvcs-tm_item-left">
-                      <p class="txt32_bold">24 990 ₽</p>
-                      <p class="txt18">+ пошлины</p>
-                    </div>
-                    <div class="dtl-srvcs-tm_item-img">
-                      <img src="./assets/images/coins.svg" alt="coins" />
-                    </div>
-                  </li>
-                  <li class="dtl-srvcs-tm-item">
-                    <div class="dtl-srvcs-tm_item-left">
-                      <p class="txt32_bold">6-8 месяцев</p>
-                      <p class="txt18">
-                        среднее время реистрации товарного знака
-                      </p>
-                    </div>
-                    <div class="dtl-srvcs-tm_item-img">
-                      <img
-                        src="./assets/images/icon-time-bl.svg"
-                        alt="icon-time"
-                      />
-                    </div>
-                  </li>
-                </ul>
+                <div class="swiper-container dtl-srvcs-swiper-container">
+                  <ul class="swiper-wrapper dtl-srvcs-swiper-wrapper">
+                    <li class="dtl-srvcs-tm-item swiper-slide">
+                      <div class="dtl-srvcs-tm_item-left">
+                        <p class="txt32_bold">24 990 ₽</p>
+                        <p class="txt18">+ пошлины</p>
+                      </div>
+                      <div class="dtl-srvcs-tm_item-img">
+                        <img src="./assets/images/coins.svg" alt="coins" />
+                      </div>
+                    </li>
+                    <li class="dtl-srvcs-tm-item swiper-slide">
+                      <div class="dtl-srvcs-tm_item-left">
+                        <p class="txt32_bold">6-8 месяцев</p>
+                        <p class="txt18">
+                          среднее время реистрации товарного знака
+                        </p>
+                      </div>
+                      <div class="dtl-srvcs-tm_item-img">
+                        <img
+                          src="./assets/images/icon-time-bl.svg"
+                          alt="icon-time"
+                        />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -661,15 +663,20 @@
                     </div>
 
                     <div class="modal-calc__counter">
-                      <button class="modal-calc__counter-btn">
+                      <button
+                        class="modal-calc__counter-btn"
+                        id="counter-minus"
+                      >
                         <img
                           class="icon-minus"
                           src="./assets/images/icon-minus.svg"
                           alt="icon-minus"
                         />
                       </button>
-                      <h3 class="txt24-days text-white">1</h3>
-                      <button class="modal-calc__counter-btn">
+                      <h3 class="txt24-days text-white" id="counter-value">
+                        1
+                      </h3>
+                      <button class="modal-calc__counter-btn" id="counter-plus">
                         <img
                           class="icon-plus"
                           src="./assets/images/icon-plus.svg"

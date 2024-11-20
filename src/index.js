@@ -39,3 +39,42 @@ $(document).ready(function () {
     updatePlaceholders();
   });
 });
+
+//для счетчика калькулятора
+$(document).ready(function () {
+  $("#counter-plus").on("click", function () {
+    const $counter = $("#counter-value");
+    let currentValue = parseInt($counter.text(), 10);
+    $counter.text(currentValue + 1);
+  });
+
+  $("#counter-minus").on("click", function () {
+    const $counter = $("#counter-value");
+    let currentValue = parseInt($counter.text(), 10);
+    if (currentValue > 1) {
+      $counter.text(currentValue - 1);
+    }
+  });
+});
+
+//слайдер для dtl-srvcs
+$(document).ready(function () {
+  let swiperInstance = null;
+
+  function initSwiper() {
+    if (window.innerWidth <= 768 && !swiperInstance) {
+      swiperInstance = new Swiper(".dtl-srvcs-swiper-container", {
+        slidesPerView: 1.1,
+      });
+    } else if (window.innerWidth > 768 && swiperInstance) {
+      swiperInstance.destroy(true, true);
+      swiperInstance = null;
+    }
+  }
+
+  // Запускаем Swiper при загрузке
+  initSwiper();
+
+  // Перезапускаем Swiper при изменении размера окна
+  $(window).on("resize", initSwiper);
+});

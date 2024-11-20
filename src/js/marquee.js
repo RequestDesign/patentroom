@@ -2,7 +2,7 @@ $(document).ready(function () {
   const $marqueeList = $(".marquee__list");
   const itemWidth = $marqueeList.children().first().outerWidth(true);
   const totalWidth = itemWidth * $marqueeList.children().length;
-  const animationDuration = totalWidth * 20;
+  const animationDuration = totalWidth * 100;
 
   // Дублируем элементы, чтобы создать бесконечный эффект
   $marqueeList.append($marqueeList.html());

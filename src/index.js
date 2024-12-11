@@ -1,3 +1,26 @@
+import './index.css'
+import './js/acc-partner.js';
+import './js/account-data.js'; 
+import './js/account-req.js';  
+import './js/blog.js';
+import './js/cat-pricing.js';  
+import './js/comment.js';      
+import './js/country.js';      
+import './js/filter.js';       
+import './js/form.js';
+import './js/map.js';
+import './js/marquee.js';      
+import './js/modal.js';        
+import './js/questions.js';    
+import './js/reg-stage-pp.js'; 
+import './js/reg-stage.js';    
+import './js/reg-stages.js';   
+import './js/search-result.js';
+import './js/slider.js';
+import './js/tooltip.js';
+import './js/validateForm.js';
+import './js/workflow.js';
+
 //Кнопки acc-search-cat
 $(document).ready(function () {
   $(".acc-search-cat__item").on("click", function () {
